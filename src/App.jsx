@@ -36,10 +36,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-12">
-      <div className="w-[210mm] min-h-[297mm] mx-auto bg-[#FBF5E8] px-12 pt-6 pb-14 flex flex-col shadow-lg">
+      <div className="w-[210mm] min-h-[297mm] mx-auto bg-[#F7EDDA] px-12 pt-6 pb-14 flex flex-col shadow-lg">
         {/* Minimal Header - Logo Centered */}
         <div className="flex items-start justify-center mb-8">
-          <img src="/olchi_logo.png" alt="Olchi" className="w-28 h-28 object-contain" />
+          <img src="/olchi_cropped.jpg" alt="Olchi" className="w-40 h-40 object-contain" />
         </div>
 
         {/* Single Column - Meal Boxes */}
