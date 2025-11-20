@@ -18,7 +18,7 @@ export default function App() {
 
   const appetizers = [
     { name: "Gunmandu", subtitle: "Pan-Fried Dumplings, Beef", price: "9.50" },
-    { name: "Japchae", price: "15.95", description: "Glass noodles with bell peppers, onion, chives, and wood ear mushrooms" },
+    { name: "Japchae", price: "15.95", description: "Glass noodles with bell peppers, onion, green onion, and wood ear mushrooms" },
     { name: "Haemul Pajeon", subtitle: "Seafood Pancake", price: "16.95", description: "Savory pancake with squid, clams, mussels, and shrimp" },
     { name: "Dakgangjeong", price: "14.95", description: "Crispy chicken in a sticky sweet-spicy sauce" }
   ];
