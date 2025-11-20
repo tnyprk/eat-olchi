@@ -191,6 +191,9 @@ export default function App() {
               <p className="text-stone-600 text-sm mt-1">
                 Ingredients: zucchini, onion, scallions in a rich spicy broth
               </p>
+              <p className="text-stone-500 text-xs italic mt-2">
+                *Raw egg on the side available upon ask
+              </p>
             </section>
 
             {/* Drinks */}
