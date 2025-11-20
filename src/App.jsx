@@ -1,5 +1,5 @@
 import { MenuFooter } from "./components/MenuFooter";
-import { Star } from "lucide-react";
+import { Star, Leaf } from "lucide-react";
 
 export default function App() {
   const drinks = [
@@ -30,8 +30,8 @@ export default function App() {
   ];
 
   const bibimbap = [
-    { name: "Beef or Spicy Pork", price: "17.50" },
-    { name: "Dubu", subtitle: "Vegan", price: "16.50" }
+    { name: "Beef or Spicy Pork", price: "17.50", isVegan: false },
+    { name: "Dubu", price: "16.50", isVegan: true }
   ];
 
   return (
@@ -90,7 +90,7 @@ export default function App() {
             {/* Kimbap */}
             <section>
               <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-2">KIMBAP</h2>
-              <p className="text-stone-500 text-sm italic mb-3">Contains pickled radish, burdock root, egg, cucumber, fish cake, and carrot</p>
+              <p className="text-stone-500 text-sm italic mb-3">Contains pickled radish, burdock root, egg, cucumber, fish cake, carrot, and sesseme oil</p>
               <div className="space-y-2">
                 {kimbap.map((item, index) => (
                   <div key={index} className="flex items-baseline justify-between">
@@ -113,8 +113,10 @@ export default function App() {
               <div className="space-y-2">
                 {bibimbap.map((item, index) => (
                   <div key={index} className="flex items-baseline justify-between">
-                    <h3 className="text-stone-900 text-base">{item.name}</h3>
-                    {item.subtitle && <span className="text-stone-500 text-sm ml-2">({item.subtitle})</span>}
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-stone-900 text-base">{item.name}</h3>
+                      {item.isVegan && <Leaf className="w-3 h-3 text-green-600 fill-green-600" />}
+                    </div>
                     <span className="flex-1 border-b border-dotted border-stone-300 mx-2 mb-1"></span>
                     <span className="text-stone-900 text-base">{item.price}</span>
                   </div>
@@ -123,9 +125,15 @@ export default function App() {
             </section>
 
             {/* Legend */}
-            <div className="flex items-center gap-2 text-stone-500 text-sm mt-4">
-              <Star className="w-3.5 h-3.5 text-[#B13613] fill-[#B13613]" />
-              <span>recommended</span>
+            <div className="flex items-center gap-4 text-stone-500 text-sm mt-4">
+              <div className="flex items-center gap-2">
+                <Star className="w-3.5 h-3.5 text-[#B13613] fill-[#B13613]" />
+                <span>recommended</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Leaf className="w-3.5 h-3.5 text-green-600 fill-green-600" />
+                <span>vegan</span>
+              </div>
             </div>
           </div>
 
