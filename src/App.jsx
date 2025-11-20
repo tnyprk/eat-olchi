@@ -9,11 +9,11 @@ export default function App() {
   ];
 
   const mealBoxes = [
-    { name: "Beef Bulgogi", price: "20.50", description: "Marinated beef grilled in sweet soy", isSpecial: false },
-    { name: "Spicy Pork Bulgogi", price: "20.50", description: "Stir-fried pork in spicy gochujang sauce", isSpecial: true },
-    { name: "Chicken Teriyaki", price: "20.50", description: "Grilled chicken glazed in house teriyaki", isSpecial: false },
-    { name: "Donkatsu", price: "22.50", description: "Crispy pork cutlet with savory brown sauce", isSpecial: false },
-    { name: "Spicy Crispy Tofu", price: "14.50", description: "Fried tofu coated in sweet-spicy glaze", isSpecial: false }
+    { name: "Beef Bulgogi", price: "20.50", description: "Marinated beef grilled in sweet soy", isRecommended: false },
+    { name: "Spicy Pork Bulgogi", price: "20.50", description: "Stir-fried pork in spicy gochujang sauce", isRecommended: true },
+    { name: "Chicken Teriyaki", price: "20.50", description: "Grilled chicken glazed in house teriyaki", isRecommended: false },
+    { name: "Donkatsu", price: "22.50", description: "Crispy pork cutlet with savory brown sauce", isRecommended: false },
+    { name: "Spicy Crispy Tofu", price: "14.50", description: "Fried tofu coated in sweet-spicy glaze", isRecommended: false }
   ];
 
   const appetizers = [
@@ -24,9 +24,9 @@ export default function App() {
   ];
 
   const kimbap = [
-    { name: "Yubu", subtitle: "Tofu Pocket", price: "13.50", isSpecial: false },
-    { name: "Tuna Mayo", price: "13.50", isSpecial: true },
-    { name: "Spicy Pork", price: "15.00", isSpecial: false }
+    { name: "Yubu", subtitle: "Tofu Pocket", price: "13.50", isRecommended: false },
+    { name: "Tuna Mayo", price: "13.50", isRecommended: true },
+    { name: "Spicy Pork", price: "15.00", isRecommended: false }
   ];
 
   const bibimbap = [
@@ -52,7 +52,7 @@ export default function App() {
                 <div className="flex items-baseline justify-between">
                   <div className="flex items-center gap-2">
                     <h3 className="text-stone-900 text-base">{item.name}</h3>
-                    {item.isSpecial && <Star className="w-3 h-3 text-[#B13613] fill-[#B13613]" />}
+                    {item.isRecommended && <Star className="w-3 h-3 text-[#B13613] fill-[#B13613]" />}
                   </div>
                   <span className="flex-1 border-b border-dotted border-stone-300 mx-4 mb-1"></span>
                   <span className="text-stone-900 text-base">{item.price}</span>
@@ -96,7 +96,7 @@ export default function App() {
                   <div key={index} className="flex items-baseline justify-between">
                     <div className="flex items-center gap-2">
                       <h3 className="text-stone-900 text-base">{item.name}</h3>
-                      {item.isSpecial && <Star className="w-3 h-3 text-[#B13613] fill-[#B13613]" />}
+                      {item.isRecommended && <Star className="w-3 h-3 text-[#B13613] fill-[#B13613]" />}
                     </div>
                     {item.subtitle && <span className="text-stone-500 text-sm">({item.subtitle})</span>}
                     <span className="flex-1 border-b border-dotted border-stone-300 mx-2 mb-1"></span>
