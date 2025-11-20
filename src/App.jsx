@@ -43,9 +43,9 @@ export default function App() {
         </div>
 
         {/* Single Column - Meal Boxes */}
-        <section className="mb-10">
-          <h2 className="text-[#B13613] text-2xl tracking-[0.3em] mb-2">MEAL BOXES</h2>
-          <p className="text-stone-500 text-base italic mb-6">Served with rice, 3 side dishes • 'ssam' set available for +$5.00</p>
+        <section className="mb-6 md:mb-10">
+          <h2 className="text-[#B13613] text-lg md:text-2xl tracking-[0.3em] mb-2">MEAL BOXES</h2>
+          <p className="text-stone-500 text-sm md:text-base italic mb-4 md:mb-6">Served with rice, 3 side dishes • 'ssam' set available for +$5.00</p>
           <div className="space-y-3">
             {mealBoxes.map((item, index) => (
               <div key={index}>
@@ -64,12 +64,12 @@ export default function App() {
         </section>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 flex-1">
           {/* Left Column */}
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10">
             {/* Appetizers */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-4">APPETIZERS</h2>
+              <h2 className="text-[#B13613] text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">APPETIZERS</h2>
               <div className="space-y-3">
                 {appetizers.map((item, index) => (
                   <div key={index}>
@@ -89,8 +89,8 @@ export default function App() {
 
             {/* Kimbap */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-2">KIMBAP</h2>
-              <p className="text-stone-500 text-sm italic mb-3">Contains pickled radish, burdock root, egg, cucumber, fish cake, carrot, and sesseme oil</p>
+              <h2 className="text-[#B13613] text-base md:text-xl tracking-[0.3em] mb-2">KIMBAP</h2>
+              <p className="text-stone-500 text-xs md:text-sm italic mb-3">Contains pickled radish, burdock root, egg, cucumber, fish cake, carrot, and sesseme oil</p>
               <div className="space-y-2">
                 {kimbap.map((item, index) => (
                   <div key={index} className="flex items-baseline justify-between">
@@ -108,8 +108,8 @@ export default function App() {
 
             {/* Bibimbap */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-2">BIBIMBAP</h2>
-              <p className="text-stone-500 text-sm italic mb-3">Contains zucchini, carrot, onion, shiitake mushroom, and bean sprouts</p>
+              <h2 className="text-[#B13613] text-base md:text-xl tracking-[0.3em] mb-2">BIBIMBAP</h2>
+              <p className="text-stone-500 text-xs md:text-sm italic mb-3">Contains zucchini, carrot, onion, shiitake mushroom, and bean sprouts</p>
               <div className="space-y-2">
                 {bibimbap.map((item, index) => (
                   <div key={index} className="flex items-baseline justify-between">
@@ -124,24 +124,13 @@ export default function App() {
               </div>
             </section>
 
-            {/* Legend */}
-            <div className="flex items-center gap-4 text-stone-500 text-sm mt-4">
-              <div className="flex items-center gap-2">
-                <Star className="w-3.5 h-3.5 text-[#B13613] fill-[#B13613]" />
-                <span>recommended</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Leaf className="w-3.5 h-3.5 text-green-600 fill-green-600" />
-                <span>vegan</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column */}
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10">
             {/* Specialty */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-4">SPECIALTY</h2>
+              <h2 className="text-[#B13613] text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">SPECIALTY</h2>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="text-stone-900 text-base">
@@ -167,8 +156,8 @@ export default function App() {
 
             {/* Soondubu */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-2">SOONDUBU</h2>
-              <p className="text-stone-500 text-sm italic mb-3">
+              <h2 className="text-[#B13613] text-base md:text-xl tracking-[0.3em] mb-2">SOONDUBU</h2>
+              <p className="text-stone-500 text-xs md:text-sm italic mb-3">
                 Spicy soft tofu stew served with rice
               </p>
               <div className="space-y-1">
@@ -198,7 +187,7 @@ export default function App() {
 
             {/* Drinks */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-4">DRINKS</h2>
+              <h2 className="text-[#B13613] text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">DRINKS</h2>
               <div className="space-y-2">
                 {drinks.map((item, index) => (
                   <div key={index} className="flex items-baseline justify-between">
@@ -209,6 +198,18 @@ export default function App() {
                 ))}
               </div>
             </section>
+          </div>
+        </div>
+
+        {/* Legend */}
+        <div className="flex items-center justify-center gap-4 text-stone-500 text-sm mt-8 mb-6">
+          <div className="flex items-center gap-2">
+            <Star className="w-3.5 h-3.5 text-[#B13613] fill-[#B13613]" />
+            <span>recommended</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Leaf className="w-3.5 h-3.5 text-green-600 fill-green-600" />
+            <span>vegan</span>
           </div>
         </div>
 
