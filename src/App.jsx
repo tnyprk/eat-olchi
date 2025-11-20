@@ -165,9 +165,9 @@ export default function App() {
               </div>
             </section>
 
-            {/* Soondoobu */}
+            {/* Soondubu */}
             <section>
-              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-2">SOONDOOBU</h2>
+              <h2 className="text-[#B13613] text-xl tracking-[0.3em] mb-2">SOONDUBU</h2>
               <p className="text-stone-500 text-sm italic mb-3">
                 Spicy soft tofu stew served with rice
               </p>
