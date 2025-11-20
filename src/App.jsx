@@ -35,11 +35,11 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
-      <div className="w-[210mm] min-h-[297mm] mx-auto bg-[#F7EDDA] px-12 pt-6 pb-14 flex flex-col shadow-lg">
+    <div className="min-h-screen bg-gray-100 md:py-12">
+      <div className="w-full md:w-[210mm] min-h-screen md:min-h-[297mm] mx-auto bg-[#F7EDDA] px-4 md:px-12 pt-4 md:pt-6 pb-8 md:pb-14 flex flex-col md:shadow-lg">
         {/* Minimal Header - Logo Centered */}
-        <div className="flex items-start justify-center mb-8">
-          <img src="/olchi_cropped.jpg" alt="Olchi" className="w-40 h-40 object-contain" />
+        <div className="flex items-start justify-center mb-6 md:mb-8">
+          <img src="/olchi_cropped.jpg" alt="Olchi" className="w-32 h-32 md:w-40 md:h-40 object-contain" />
         </div>
 
         {/* Single Column - Meal Boxes */}
@@ -64,7 +64,7 @@ export default function App() {
         </section>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-2 gap-12 flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 flex-1">
           {/* Left Column */}
           <div className="space-y-10">
             {/* Appetizers */}
