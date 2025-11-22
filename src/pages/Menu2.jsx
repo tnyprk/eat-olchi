@@ -194,7 +194,7 @@ export default function Menu2() {
         <div className="mt-2 md:mt-4 pt-2 border-t border-[#B13613]/30">
           <div className="text-center text-[10px] md:text-xs text-stone-700 space-y-0.5">
             <p className="font-medium">4068 San Pablo Dam Rd • El Sobrante, CA</p>
-            <p>(510) 283-5007 • eat-olchi.com • @olchikorean</p>
+            <p>(510) 283-5007 • eat-olchi.com • @eat_olchi</p>
           </div>
         </div>
       </div>

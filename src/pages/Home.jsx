@@ -39,15 +39,6 @@ export default function Home() {
             alt="Olchi Korean Restaurant"
             className="w-48 h-48 md:w-64 md:h-64 object-contain mb-6 md:mb-8"
           />
-
-          <h1 className="text-3xl md:text-5xl font-light text-[#B13613] tracking-wider mb-3 md:mb-4">
-            OLCHI
-          </h1>
-
-          <p className="text-stone-600 text-lg md:text-xl mb-8 md:mb-12 text-center italic">
-            Korean Comfort Food
-          </p>
-
           {/* Delivery Buttons Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl">
             {deliveryPlatforms.map((platform, index) => (
@@ -66,7 +57,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="mt-8">
+        <div>
           <MenuFooter />
         </div>
       </div>
