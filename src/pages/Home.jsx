@@ -30,8 +30,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl h-screen md:h-auto md:min-h-[90vh] mx-auto bg-[#F7EDDA] px-6 md:px-12 py-8 md:py-12 flex flex-col justify-between md:shadow-lg">
+    <div className="h-screen bg-[#F7EDDA] overflow-hidden">
+      <div className="h-full max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6 flex flex-col justify-between">
         {/* Logo & Welcome */}
         <div className="flex flex-col items-center justify-center flex-1">
           <img

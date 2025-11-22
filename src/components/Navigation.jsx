@@ -4,8 +4,7 @@ import { Home, Utensils, Info, Phone } from "lucide-react";
 export function Navigation() {
   const navItems = [
     { path: "/", label: "Home", icon: Home },
-    { path: "/menu1", label: "Menu 1", icon: Utensils },
-    { path: "/menu2", label: "Menu 2", icon: Utensils },
+    { path: "/menu", label: "Menu", icon: Utensils },
     { path: "/about", label: "About", icon: Info },
     { path: "/contact", label: "Contact", icon: Phone }
   ];
