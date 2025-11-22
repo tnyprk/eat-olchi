@@ -22,7 +22,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[#F7EDDA] flex flex-col">
-      <div className="flex-1 px-4 md:px-12 py-8 md:py-12">
+      <div className="flex-1 px-4 md:px-12 py-6 md:py-10">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-[#B13613] tracking-[0.3em] mb-4">ABOUT OLCHI</h1>

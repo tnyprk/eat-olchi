@@ -4,7 +4,7 @@ import { Star, Leaf } from "lucide-react";
 export function Menu() {
   return (
     <div className="h-screen bg-[#F7EDDA] overflow-hidden">
-      <div className="h-full max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6 overflow-y-auto">
+      <div className="h-full max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-5 overflow-y-auto">
         {/* Header */}
         <div className="text-center mb-6">
           <h1 className="text-[#B13613] tracking-[0.3em] mb-1">OLCHI MENU</h1>
