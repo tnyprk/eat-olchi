@@ -70,22 +70,16 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">HOURS</h2>
             </div>
             <div className="space-y-2 text-stone-700">
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>Mon - Thu (월~목)</span>
-                </div>
-                <div className="text-sm text-stone-600 pl-4">
+              <div className="flex justify-between">
+                <span>Mon - Thu (월~목)</span>
+                <div className="text-right">
                   <div>11:00 AM - 2:30 PM</div>
                   <div>4:00 PM - 9:30 PM</div>
                 </div>
               </div>
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>Fri - Sat (금~토)</span>
-                </div>
-                <div className="text-sm text-stone-600 pl-4">
-                  <div>11:00 AM - 9:30 PM</div>
-                </div>
+              <div className="flex justify-between">
+                <span>Fri - Sat (금~토)</span>
+                <span>11:00 AM - 9:30 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
@@ -111,14 +105,19 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Map Placeholder */}
+        {/* Map */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-stone-200 rounded-lg overflow-hidden border border-stone-300 h-64 md:h-80 flex items-center justify-center">
-            <div className="text-center text-stone-500">
-              <MapPin className="w-12 h-12 mx-auto mb-3" />
-              <p>Map placeholder</p>
-              <p className="text-sm">4068 San Pablo Dam Rd, El Sobrante, CA</p>
-            </div>
+          <div className="rounded-lg overflow-hidden border border-stone-300 h-64 md:h-80">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.584!2d-122.298915!3d37.957362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857e9c00000000%3A0x0!2s4068%20San%20Pablo%20Dam%20Rd%2C%20El%20Sobrante%2C%20CA%2094803!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Olchi Restaurant Location"
+            ></iframe>
           </div>
         </div>
 
