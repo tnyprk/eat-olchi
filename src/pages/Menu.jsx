@@ -125,14 +125,17 @@ export function Menu() {
             {/* Restaurant Info */}
             <section className="bg-white/50 p-4 rounded-lg border border-stone-200">
               <h2 className="text-[#B13613] tracking-[0.2em] mb-3 pb-2 border-b border-stone-300">HOURS</h2>
-              <div className="space-y-1 text-sm text-stone-700 mb-4">
-                <div className="flex justify-between">
-                  <span>Mon-Fri</span>
-                  <span>11am - 8pm</span>
+              <div className="space-y-2 text-sm text-stone-700 mb-4">
+                <div>
+                  <div className="font-medium">Mon-Thu (월~목)</div>
+                  <div className="text-xs text-stone-600 pl-2">
+                    <div>11am - 2:30pm</div>
+                    <div>4pm - 9:30pm</div>
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>12pm - 8pm</span>
+                <div>
+                  <div className="font-medium">Fri-Sat (금~토)</div>
+                  <div className="text-xs text-stone-600 pl-2">11am - 9:30pm</div>
                 </div>
                 <div className="flex justify-between">
                   <span>Sunday</span>

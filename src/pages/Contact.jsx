@@ -25,14 +25,24 @@ export default function Contact() {
               4068 San Pablo Dam Rd<br />
               El Sobrante, CA 94803
             </p>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#B13613] text-sm hover:underline"
-            >
-              Get Directions →
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=4068+San+Pablo+Dam+Rd,El+Sobrante,CA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B13613] text-sm hover:underline"
+              >
+                Get Directions (Google Maps) →
+              </a>
+              <a
+                href="https://maps.apple.com/?daddr=4068+San+Pablo+Dam+Rd,El+Sobrante,CA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B13613] text-sm hover:underline"
+              >
+                Get Directions (Apple Maps) →
+              </a>
+            </div>
           </div>
 
           {/* Phone */}
@@ -60,13 +70,22 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">HOURS</h2>
             </div>
             <div className="space-y-2 text-stone-700">
-              <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span>11:00 AM - 8:00 PM</span>
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span>Mon - Thu (월~목)</span>
+                </div>
+                <div className="text-sm text-stone-600 pl-4">
+                  <div>11:00 AM - 2:30 PM</div>
+                  <div>4:00 PM - 9:30 PM</div>
+                </div>
               </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>12:00 PM - 8:00 PM</span>
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span>Fri - Sat (금~토)</span>
+                </div>
+                <div className="text-sm text-stone-600 pl-4">
+                  <div>11:00 AM - 9:30 PM</div>
+                </div>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
