@@ -30,6 +30,14 @@ export const menuData = {
       isRecommended: false,
       isSpicy: false,
       isVegetarian: true
+    },
+    {
+      name: "Donkatsu (Pork Cutlet)",
+      price: "22.50",
+      description: "Crispy, golden panko-fried pork cutlet with house tonkatsu sauce",
+      isRecommended: false,
+      isSpicy: false,
+      isVegetarian: false
     }
   ],
 
@@ -123,7 +131,7 @@ export const menuData = {
     { name: "Yuzu Sparkling Lemonade", price: "6.00" },
     { name: "Soju", price: "13.00" },
     { name: "Beer", price: "9.00" },
-    { name: "Soft Drinks & Water", price: "2.50" },
+    { name: "Soft Drinks & Water", price: "3.00" },
   ],
 
   // Additional info
