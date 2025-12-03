@@ -123,7 +123,7 @@ export const menuData = {
     { name: "Yuzu Sparkling Lemonade", price: "6.00" },
     { name: "Soju", price: "13.00" },
     { name: "Beer", price: "9.00" },
-    { name: "Soft Drinks & Water", price: "2.95" },
+    { name: "Soft Drinks & Water", price: "2.50" },
   ],
 
   // Additional info
