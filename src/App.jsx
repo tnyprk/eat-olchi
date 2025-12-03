@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
+import { AnnouncementBanner } from "./components/AnnouncementBanner";
 import Home from "./pages/Home";
 import Menu1 from "./pages/Menu1";
 import Gallery from "./pages/Gallery";
@@ -10,6 +11,7 @@ export default function App() {
     <Router>
       <div className="min-h-screen">
         <Navigation />
+        <AnnouncementBanner />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu1 />} />
