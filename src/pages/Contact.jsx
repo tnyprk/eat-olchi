@@ -74,12 +74,12 @@ export default function Contact() {
                 <span>Mon - Thu (월~목)</span>
                 <div className="text-right">
                   <div>11:00 AM - 2:30 PM</div>
-                  <div>4:00 PM - 9:30 PM</div>
+                  <div>4:00 PM - 8:30 PM</div>
                 </div>
               </div>
               <div className="flex justify-between">
                 <span>Fri - Sat (금~토)</span>
-                <span>11:00 AM - 9:30 PM</span>
+                <span>11:00 AM - 8:30 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
