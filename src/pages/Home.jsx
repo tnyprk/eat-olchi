@@ -36,9 +36,9 @@ export default function Home() {
           {/* Logo & Welcome */}
           <div className="flex flex-col items-center space-y-6">
             <img
-              src="/olchi_cropped.jpg"
+              src="/olchi_logo.png"
               alt="Olchi Korean Restaurant"
-              className="w-48 h-48 md:w-56 md:h-56 object-contain"
+              className="w-60 h-60 md:w-56 md:h-56 object-contain"
             />
             {/* Delivery Buttons Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl">
