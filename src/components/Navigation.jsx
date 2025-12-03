@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
-import { Home, Utensils, Info, Phone } from "lucide-react";
+import { Home, Utensils, Camera, Phone } from "lucide-react";
 
 export function Navigation() {
   const navItems = [
     { path: "/", label: "Home", icon: Home },
     { path: "/menu", label: "Menu", icon: Utensils },
+    { path: "/gallery", label: "Gallery", icon: Camera },
     { path: "/contact", label: "Contact", icon: Phone }
   ];
 

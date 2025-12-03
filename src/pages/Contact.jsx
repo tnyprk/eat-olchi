@@ -121,23 +121,31 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Order Online Section */}
-        <div className="max-w-4xl mx-auto mt-12 bg-[#B13613] text-white p-6 md:p-8 rounded-lg text-center">
-          <h2 className="tracking-[0.3em] mb-4">ORDER ONLINE</h2>
-          <p className="mb-6">Order delivery or pickup through your favorite platform</p>
+        {/* Order Section */}
+        <div className="max-w-4xl mx-auto mt-12">
+          <h2 className="text-[#B13613] tracking-[0.3em] text-center mb-6 text-xl">ORDER OPTIONS</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <button className="bg-white text-[#B13613] py-3 rounded hover:bg-stone-100 transition-colors">
-              DoorDash
+            {/* Coming Soon Buttons */}
+            <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
+              <div className="text-sm font-medium">DoorDash</div>
+              <div className="text-xs">Coming Soon</div>
             </button>
-            <button className="bg-white text-[#B13613] py-3 rounded hover:bg-stone-100 transition-colors">
-              Uber Eats
+            <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
+              <div className="text-sm font-medium">Uber Eats</div>
+              <div className="text-xs">Coming Soon</div>
             </button>
-            <button className="bg-white text-[#B13613] py-3 rounded hover:bg-stone-100 transition-colors">
-              Grubhub
+            <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
+              <div className="text-sm font-medium">Grubhub</div>
+              <div className="text-xs">Coming Soon</div>
             </button>
-            <button className="bg-white text-[#B13613] py-3 rounded hover:bg-stone-100 transition-colors">
-              Direct Pickup
-            </button>
+            {/* Active Button */}
+            <a
+              href="tel:5102835007"
+              className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
+            >
+              <div className="text-sm font-medium">Direct Pickup</div>
+              <div className="text-xs">Call Now</div>
+            </a>
           </div>
         </div>
       </div>

@@ -169,21 +169,30 @@ export function Menu() {
             </section>
 
             {/* Ordering Options */}
-            <section className="bg-[#B13613] text-white p-4 rounded-lg">
-              <h2 className="tracking-[0.2em] mb-3">ORDER NOW</h2>
-              <div className="space-y-2 text-sm">
-                <button className="w-full bg-white text-[#B13613] py-2 rounded hover:bg-stone-100 transition-colors">
-                  DoorDash
+            <section className="bg-white/50 p-4 rounded-lg border border-stone-200">
+              <h2 className="text-[#B13613] tracking-[0.2em] mb-3 text-center">ORDER</h2>
+              <div className="space-y-2 text-xs">
+                {/* Coming Soon Buttons */}
+                <button disabled className="w-full bg-gray-300 text-gray-500 py-2 rounded cursor-not-allowed opacity-60">
+                  <div className="font-medium">DoorDash</div>
+                  <div className="text-[10px]">Coming Soon</div>
                 </button>
-                <button className="w-full bg-white text-[#B13613] py-2 rounded hover:bg-stone-100 transition-colors">
-                  Uber Eats
+                <button disabled className="w-full bg-gray-300 text-gray-500 py-2 rounded cursor-not-allowed opacity-60">
+                  <div className="font-medium">Uber Eats</div>
+                  <div className="text-[10px]">Coming Soon</div>
                 </button>
-                <button className="w-full bg-white text-[#B13613] py-2 rounded hover:bg-stone-100 transition-colors">
-                  Grubhub
+                <button disabled className="w-full bg-gray-300 text-gray-500 py-2 rounded cursor-not-allowed opacity-60">
+                  <div className="font-medium">Grubhub</div>
+                  <div className="text-[10px]">Coming Soon</div>
                 </button>
-                <button className="w-full bg-white text-[#B13613] py-2 rounded hover:bg-stone-100 transition-colors">
-                  Direct Pickup
-                </button>
+                {/* Active Button */}
+                <a
+                  href="tel:5102835007"
+                  className="block w-full bg-[#B13613] text-white py-2 rounded hover:bg-[#8a2a0f] transition-colors text-center"
+                >
+                  <div className="font-medium">Direct Pickup</div>
+                  <div className="text-[10px]">Call Now</div>
+                </a>
               </div>
             </section>
           </div>
