@@ -97,7 +97,7 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">EMAIL</h2>
             </div>
             <p className="text-stone-700 mb-3">
-              info@olchirestaurant.com
+              olchikses@gmail.com
             </p>
             <p className="text-stone-600 text-sm">
               Questions? Special requests? Send us an email
