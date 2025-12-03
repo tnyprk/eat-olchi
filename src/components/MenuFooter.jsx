@@ -42,7 +42,7 @@ export function MenuFooter() {
             </a>
 
             <a
-              href="https://instagram.com/olchikorean"
+              href="https://instagram.com/eat_olchi"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 md:gap-1.5 hover:text-[#B13613] transition-colors"
