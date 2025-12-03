@@ -32,7 +32,7 @@ export const menuData = {
       isVegetarian: true
     },
     {
-      name: "Donkatsu (Pork Cutlet)",
+      name: "Donkatsu",
       price: "22.50",
       description: "Crispy, golden panko-fried pork cutlet with house tonkatsu sauce",
       isRecommended: false,
