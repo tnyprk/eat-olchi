@@ -17,7 +17,7 @@ export const menuData = {
       isSpicy: true
     },
     {
-      name: "Sweet & Spicy Boneless KFC",
+      name: "Sweet & Spicy Boneless Chicken Bites",
       price: "21.50",
       description: "Crispy Korean Fried Chicken tossed in sweet gochujang glaze",
       isRecommended: false,
