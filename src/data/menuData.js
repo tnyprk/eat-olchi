@@ -128,7 +128,7 @@ export const menuData = {
   ],
 
   drinks: [
-    { name: "Yuzu Sparkling Lemonade", price: "6.00" },
+    { name: "Yuzu Sparkling Ade", price: "6.00" },
     { name: "Soju", price: "13.00" },
     { name: "Beer", price: "9.00" },
     { name: "Soft Drinks & Water", price: "3.00" },
