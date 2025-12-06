@@ -49,9 +49,9 @@ export const menuData = {
       description: "Crispy pan-fried dumplings stuffed with beef"
     },
     {
-      name: "Japchae",
+      name: "Buchu Jeon",
       price: "15.50",
-      description: "Stir-fried glass noodles with vegetables and mushrooms",
+      description: "Crispy Korean Chives pancake",
       isVegetarian: true
     },
     {
@@ -75,6 +75,7 @@ export const menuData = {
     {
       name: "Yubu Kimbap",
       subtitle: "Tofu Pocket Roll",
+      description: "Vegetarian upon request",
       price: "15.50",
       isRecommended: false,
       isVegetarian: true
@@ -91,9 +92,7 @@ export const menuData = {
     subtitle: "Army Stew",
     price: "37.50",
     description:
-      "Hearty, spicy Korean army stew—made to share.",
-    servingSize: "For Two",
-    ingredients: "napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef",
+      "Hearty, spicy Korean army stew—hotpot made to share with napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef",
     isBest: true,
     isSpicy: true
   },
@@ -128,7 +127,8 @@ export const menuData = {
   ],
 
   drinks: [
-    { name: "Yuzu Sparkling Ade", price: "6.00" },
+    { name: "Yuzu Sparkling Ade", price: "5.95" },
+    { name: "Plum Sparkling Ade", price: "5.95" },
     { name: "Soju", price: "13.00" },
     { name: "Beer", price: "9.00" },
     { name: "Soft Drinks & Water", price: "3.00" },

@@ -30,19 +30,21 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen bg-[#F7EDDA] overflow-hidden flex flex-col">
-      <div className="flex-1 flex flex-col justify-center">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 w-full -mt-16">
-          {/* Logo & Welcome */}
-          <div className="flex flex-col items-center space-y-6">
+    <div className="min-h-[calc(100vh-140px)] bg-[#F7EDDA] flex flex-col">
+      <div className="flex-1 flex flex-col justify-center items-center py-8 md:py-12">
+        <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
+          {/* Logo Section */}
+          <div className="flex justify-center mb-8 md:mb-12">
             <img
               src="/olchi_logo.png"
               alt="Olchi Korean Restaurant"
-              className="w-60 h-60 md:w-56 md:h-56 object-contain"
+              className="w-48 h-48 md:w-56 md:h-56 object-contain"
             />
+          </div>
 
-            {/* Delivery Buttons Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl">
+          {/* Delivery Buttons Section */}
+          <div className="w-full max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               {deliveryPlatforms.map((platform, index) => (
                 platform.available ? (
                   <a
@@ -68,11 +70,11 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Footer */}
-          <div className="mt-8">
-            <MenuFooter />
-          </div>
+        {/* Footer - Separate Section */}
+        <div className="py-4">
+          <MenuFooter />
         </div>
       </div>
     </div>

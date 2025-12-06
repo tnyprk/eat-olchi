@@ -17,7 +17,7 @@ export default function Menu1() {
 
         {/* Single Column - Meal Boxes */}
         <section className="mb-8 md:mb-12">
-          <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">
+          <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
             MEAL BOXES
           </h2>
           <p className="font-body text-olchi-muted text-sm md:text-base italic mb-5 md:mb-7 leading-relaxed">
@@ -58,43 +58,45 @@ export default function Menu1() {
           <div className="space-y-6 md:space-y-10">
             {/* Specialty */}
             <section>
-              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">
-                SPECIALTY
+              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
+                HOTPOT
               </h2>
               <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-body text-olchi-text text-base font-medium">
-                    {menuData.specialty.name}{" "}
-                    <span className="text-olchi-muted text-base">
-                      ({menuData.specialty.subtitle})
-                    </span>
-                  </h3>
-                  <Star className="w-3 h-3 text-olchi-red fill-olchi-red" />
-                  {menuData.specialty.isSpicy && (
-                    <Flame className="w-3 h-3 text-olchi-red" />
-                  )}
-                </div>
-                <p className="font-body text-olchi-muted text-base mt-1 leading-relaxed">
-                  {menuData.specialty.description}
-                </p>
-                <div className="flex items-baseline justify-between text-base mt-2">
-                  <h3 className="font-body text-olchi-text text-base font-medium">
-                    {menuData.specialty.servingSize}
-                  </h3>
-                  <span className="flex-1 border-b border-dotted border-olchi-rule mx-2 mb-1" />
+                <div className="flex items-baseline justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-body text-olchi-text text-base font-medium">
+                        {menuData.specialty.name}
+                      </h3>
+                      {menuData.specialty.isBest && (
+                        <Star className="w-3 h-3 text-olchi-red fill-olchi-red" />
+                      )}
+                      {menuData.specialty.isSpicy && (
+                        <Flame className="w-3 h-3 text-olchi-red" />
+                      )}
+                    </div>
+                    {menuData.specialty.subtitle && (
+                      <p className="font-body text-olchi-muted text-sm">
+                        ({menuData.specialty.subtitle})
+                      </p>
+                    )}
+                  </div>
+                  <span className="flex-shrink-0 border-b border-dotted border-olchi-rule w-16 mx-2 mb-1" />
                   <span className="font-body text-olchi-text text-base">
                     {menuData.specialty.price}
                   </span>
                 </div>
-                <p className="font-body text-olchi-muted text-sm mt-1 leading-relaxed">
-                  {menuData.specialty.ingredients}
-                </p>
+                {menuData.specialty.description && (
+                  <p className="font-body text-olchi-muted text-sm mt-1 leading-relaxed">
+                    {menuData.specialty.description}
+                  </p>
+                )}
               </div>
             </section>
 
             {/* Appetizers */}
             <section>
-              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">
+              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
                 APPETIZERS
               </h2>
               <div className="space-y-3">
@@ -136,7 +138,7 @@ export default function Menu1() {
           <div className="space-y-6 md:space-y-10">
             {/* Kimbap */}
             <section>
-              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">
+              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
                 KIMBAP
               </h2>
               <p className="font-body text-olchi-muted text-xs md:text-sm italic mb-3 leading-relaxed">
@@ -144,27 +146,36 @@ export default function Menu1() {
               </p>
               <div className="space-y-2">
                 {menuData.kimbap.map((item, index) => (
-                  <div key={index} className="flex items-baseline justify-between">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-body text-olchi-text text-base font-medium">
-                        {item.name}
-                      </h3>
-                      {item.isRecommended && (
-                        <Star className="w-3 h-3 text-olchi-red fill-olchi-red" />
-                      )}
-                      {item.isVegetarian && (
-                        <Leaf className="w-3 h-3 text-green-600 fill-green-600" />
-                      )}
-                    </div>
-                    {item.subtitle && (
-                      <span className="font-body text-olchi-muted text-sm">
-                        ({item.subtitle})
+                  <div key={index}>
+                    <div className="flex items-baseline justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-body text-olchi-text text-base font-medium">
+                            {item.name}
+                          </h3>
+                          {item.isRecommended && (
+                            <Star className="w-3 h-3 text-olchi-red fill-olchi-red" />
+                          )}
+                          {item.isVegetarian && (
+                            <Leaf className="w-3 h-3 text-green-600 fill-green-600" />
+                          )}
+                        </div>
+                        {item.subtitle && (
+                          <p className="font-body text-olchi-muted text-sm">
+                            ({item.subtitle})
+                          </p>
+                        )}
+                      </div>
+                      <span className="flex-shrink-0 border-b border-dotted border-olchi-rule w-16 mx-2 mb-1" />
+                      <span className="font-body text-olchi-text text-base">
+                        {item.price}
                       </span>
+                    </div>
+                    {item.description && (
+                      <p className="font-body text-olchi-muted text-sm mt-1 leading-relaxed">
+                        {item.description}
+                      </p>
                     )}
-                    <span className="flex-1 border-b border-dotted border-olchi-rule mx-2 mb-1" />
-                    <span className="font-body text-olchi-text text-base">
-                      {item.price}
-                    </span>
                   </div>
                 ))}
               </div>
@@ -172,7 +183,7 @@ export default function Menu1() {
 
             {/* Soondubu */}
             <section>
-              <div className="flex items-center gap-2 mb-3 md:mb-4">
+              <div className="flex items-center gap-2 mb-1">
                 <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em]">
                   SOONDUBU
                 </h2>
@@ -203,7 +214,7 @@ export default function Menu1() {
 
             {/* Drinks */}
             <section>
-              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-3 md:mb-4">
+              <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
                 DRINKS
               </h2>
               <div className="space-y-2">

@@ -100,7 +100,7 @@ export default function Contact() {
               info@eat-olchi.com
             </p>
             <p className="text-stone-600 text-sm">
-              Questions? Special requests? Send us an email
+              Questions? Catering inquiries? Send us an email
             </p>
           </div>
         </div>
