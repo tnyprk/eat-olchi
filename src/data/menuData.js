@@ -13,7 +13,7 @@ export const menuData = {
       name: "Pork Bulgogi",
       price: "21.50",
       description: "Spicy gochujang-marinated pork, charred and juicy",
-      isRecommended: true,
+      isRecommended: false,
       isSpicy: true
     },
     {
@@ -51,7 +51,7 @@ export const menuData = {
     {
       name: "Buchu Jeon",
       price: "15.50",
-      description: "Crispy Korean Chives pancake",
+      description: "Crispy Korean Chives Pancake",
       isVegetarian: true
     },
     {
@@ -63,15 +63,15 @@ export const menuData = {
     },
     {
       name: "Kimchi Fried Rice",
-      price: "10.50",
-      description: "Kimchi fried rice with spam. Add mozarella cheese for $1.00"
+      price: "16.50",
+      description: "Kimchi fried rice with spam. Add mozzarella cheese for $1.00"
     }
   ],
 
   // For Menu.jsx and Menu2.jsx simplified version
   specials: [
     { name: "Beef Bulgogi", price: "23.50", description: "Rice + 3 sides", isRecommended: false },
-    { name: "Spicy Pork Bulgogi", price: "21.50", description: "Rice + 3 sides", isRecommended: true },
+    { name: "Spicy Pork Bulgogi", price: "21.50", description: "Rice + 3 sides", isRecommended: false },
     { name: "Dakgangjeong", price: "21.50", description: "Rice + 3 sides", isRecommended: false },
     { name: "Tofu Gangjeong", price: "20.50", description: "Rice + 3 sides", isRecommended: false }
   ],
@@ -97,20 +97,19 @@ export const menuData = {
     subtitle: "Army Stew",
     price: "37.50",
     description:
-      "Hearty, spicy Korean army stew—hotpot made to share with napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef",
+      "Hearty, spicy Korean army stew—hotpot made to share with napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef. Add ramen noodles for +$1.00",
     isBest: true,
     isSpicy: true
   },
 
   soondubu: {
-    description: "Spicy soft tofu soup served with rice",
+    description: "Spicy soft tofu soup served with rice. Zucchini, onion, and scallions in a rich, spicy broth",
     items: [
       { name: "Beef", price: "17.50" },
       { name: "Seafood", price: "18.50" },
       { name: "Combo", price: "18.50" }
     ],
-    ingredients: "zucchini, onion, and scallions in a rich spicy broth",
-    note: "*Raw egg available upon request."
+    note: "*Raw egg available upon request"
   },
 
   // For Menu.jsx and Menu2.jsx
@@ -136,12 +135,12 @@ export const menuData = {
     { name: "Plum Sparkling Ade", price: "5.95" },
     { name: "Soju", price: "13.00" },
     { name: "Beer", price: "9.00" },
-    { name: "Soft Drinks & Water", price: "3.00" },
+    { name: "Soft Drinks / Water", price: "3.00" },
   ],
 
   // Additional info
   mealBoxesNote:
-    "Served with rice, 3 side dishes • 'ssam' (assosrted vegetables) set available for +$3.00",
+    "Served with rice, 3 side dishes • Ssam (assorted vegetables) set available for +$3.00",
   kimbapNote:
     "Rolled rice with vegetables & sesame oil • Contains pickled radish, burdock root, egg, cucumber, fish cake, carrot, sesame oil & sesame seeds",
   specialsNote:

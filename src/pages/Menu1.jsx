@@ -23,7 +23,7 @@ export default function Menu1() {
           <p className="font-body text-olchi-muted text-sm md:text-base italic mb-5 md:mb-7 leading-relaxed">
             {menuData.mealBoxesNote}
           </p>
-          <div className="space-y-4">
+          <div className="space-y-3.5">
             {menuData.mealBoxes.map((item, index) => (
               <div key={index}>
                 <div className="flex items-baseline justify-between">
@@ -55,7 +55,7 @@ export default function Menu1() {
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 flex-1">
           {/* Left Column */}
-          <div className="space-y-6 md:space-y-10">
+          <div className="flex flex-col space-y-6 md:space-y-10">
             {/* Specialty */}
             <section>
               <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
@@ -99,7 +99,7 @@ export default function Menu1() {
               <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
                 APPETIZERS
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-3.5">
                 {menuData.appetizers.map((item, index) => (
                   <div key={index}>
                     <div className="flex items-baseline justify-between">
@@ -132,6 +132,33 @@ export default function Menu1() {
                 ))}
               </div>
             </section>
+
+            {/* Spacer to push legend to bottom */}
+            <div className="flex-1" />
+
+            {/* Legend and Allergy Warning */}
+            <div className="space-y-2">
+              {/* Legend */}
+              <div className="flex items-center justify-start gap-4 font-body text-olchi-muted text-sm">
+                <div className="flex items-center gap-2">
+                  <Star className="w-3.5 h-3.5 text-olchi-red fill-olchi-red" />
+                  <span>chef's pick</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Leaf className="w-3.5 h-3.5 text-green-600 fill-green-600" />
+                  <span>vegetarian</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Flame className="w-3.5 h-3.5 text-olchi-red" />
+                  <span>spicy</span>
+                </div>
+              </div>
+
+              {/* Allergy Warning */}
+              <p className="font-body text-olchi-muted text-sm leading-relaxed">
+                Please inform us of any allergies!
+              </p>
+            </div>
           </div>
 
           {/* Right Column */}
@@ -159,9 +186,6 @@ export default function Menu1() {
                   </div>
                 ))}
               </div>
-              <p className="font-body text-olchi-muted text-sm mt-1 leading-relaxed">
-                {menuData.soondubu.ingredients}
-              </p>
               <p className="font-body text-olchi-muted text-xs italic mt-2">
                 {menuData.soondubu.note}
               </p>
@@ -234,22 +258,6 @@ export default function Menu1() {
                 ))}
               </div>
             </section>
-          </div>
-        </div>
-
-        {/* Legend */}
-        <div className="flex items-center justify-start gap-4 font-body text-olchi-muted text-sm mt-8 mb-6">
-          <div className="flex items-center gap-2">
-            <Star className="w-3.5 h-3.5 text-olchi-red fill-olchi-red" />
-            <span>recommended</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Leaf className="w-3.5 h-3.5 text-green-600 fill-green-600" />
-            <span>vegetarian</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Flame className="w-3.5 h-3.5 text-olchi-red" />
-            <span>spicy</span>
           </div>
         </div>
 
