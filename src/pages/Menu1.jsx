@@ -136,6 +136,37 @@ export default function Menu1() {
 
           {/* Right Column */}
           <div className="space-y-6 md:space-y-10">
+            {/* Soondubu */}
+            <section>
+              <div className="flex items-center gap-2 mb-1">
+                <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em]">
+                  SOONDUBU
+                </h2>
+                <Flame className="w-4 h-4 md:w-5 md:h-5 text-olchi-red" />
+              </div>
+              <p className="font-body text-olchi-muted text-xs md:text-sm italic mb-3 leading-relaxed">
+                {menuData.soondubu.description}
+              </p>
+              <div className="space-y-1">
+                {menuData.soondubu.items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-baseline justify-between text-base"
+                  >
+                    <h3 className="font-body text-olchi-text text-base font-medium">{item.name}</h3>
+                    <span className="flex-1 border-b border-dotted border-olchi-rule mx-2 mb-1" />
+                    <span className="font-body text-olchi-text">{item.price}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="font-body text-olchi-muted text-sm mt-1 leading-relaxed">
+                {menuData.soondubu.ingredients}
+              </p>
+              <p className="font-body text-olchi-muted text-xs italic mt-2">
+                {menuData.soondubu.note}
+              </p>
+            </section>
+
             {/* Kimbap */}
             <section>
               <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em] mb-1">
@@ -179,37 +210,6 @@ export default function Menu1() {
                   </div>
                 ))}
               </div>
-            </section>
-
-            {/* Soondubu */}
-            <section>
-              <div className="flex items-center gap-2 mb-1">
-                <h2 className="text-olchi-red text-base md:text-xl tracking-[0.3em]">
-                  SOONDUBU
-                </h2>
-                <Flame className="w-4 h-4 md:w-5 md:h-5 text-olchi-red" />
-              </div>
-              <p className="font-body text-olchi-muted text-xs md:text-sm italic mb-3 leading-relaxed">
-                {menuData.soondubu.description}
-              </p>
-              <div className="space-y-1">
-                {menuData.soondubu.items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-baseline justify-between text-base"
-                  >
-                    <h3 className="font-body text-olchi-text text-base font-medium">{item.name}</h3>
-                    <span className="flex-1 border-b border-dotted border-olchi-rule mx-2 mb-1" />
-                    <span className="font-body text-olchi-text">{item.price}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="font-body text-olchi-muted text-sm mt-1 leading-relaxed">
-                {menuData.soondubu.ingredients}
-              </p>
-              <p className="font-body text-olchi-muted text-xs italic mt-2">
-                {menuData.soondubu.note}
-              </p>
             </section>
 
             {/* Drinks */}

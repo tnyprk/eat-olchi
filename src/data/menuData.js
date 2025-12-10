@@ -60,6 +60,11 @@ export const menuData = {
       price: "16.50",
       description:
         "Crispy seafood pancake with squid, clams, mussels, and shrimp"
+    },
+    {
+      name: "Kimchi Fried Rice",
+      price: "10.50",
+      description: "Kimchi fried rice with spam. Add mozarella cheese for $1.00"
     }
   ],
 
@@ -136,7 +141,7 @@ export const menuData = {
 
   // Additional info
   mealBoxesNote:
-    "Served with rice, 3 side dishes • 'ssam' set available for +$3.00",
+    "Served with rice, 3 side dishes • 'ssam' (assosrted vegetables) set available for +$3.00",
   kimbapNote:
     "Rolled rice with vegetables & sesame oil • Contains pickled radish, burdock root, egg, cucumber, fish cake, carrot, sesame oil & sesame seeds",
   specialsNote:
