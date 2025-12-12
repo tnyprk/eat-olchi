@@ -97,7 +97,7 @@ export const menuData = {
     subtitle: "Army Stew",
     price: "37.50",
     description:
-      "Hearty, spicy Korean army stew—hotpot made to share with napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef. Add ramen noodles for +$1.00",
+      "Hearty, spicy Korean army stew—hotpot made to share with napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef. Add ramen noodles for +$2.50",
     isBest: true,
     isSpicy: true
   },
@@ -133,8 +133,6 @@ export const menuData = {
   drinks: [
     { name: "Yuzu Sparkling Ade", price: "5.95" },
     { name: "Plum Sparkling Ade", price: "5.95" },
-    { name: "Soju", price: "13.00" },
-    { name: "Beer", price: "9.00" },
     { name: "Soft Drinks / Water", price: "3.00" },
   ],
 
