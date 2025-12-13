@@ -49,12 +49,6 @@ export const menuData = {
       description: "Crispy pan-fried dumplings stuffed with beef"
     },
     {
-      name: "Buchu Jeon",
-      price: "15.50",
-      description: "Crispy Korean Chives Pancake",
-      isVegetarian: true
-    },
-    {
       name: "Haemul Pajeon",
       subtitle: "Seafood Pancake",
       price: "16.50",
@@ -107,7 +101,7 @@ export const menuData = {
     items: [
       { name: "Beef", price: "17.50" },
       { name: "Seafood", price: "18.50" },
-      { name: "Combo", price: "18.50" }
+      { name: "Combo", price: "18.50" },
     ],
     note: "*Raw egg available upon request"
   },
