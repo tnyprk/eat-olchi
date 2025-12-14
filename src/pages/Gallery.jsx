@@ -11,8 +11,8 @@ import "swiper/css/pagination";
 
 export default function Gallery() {
   return (
-    <div className="fixed inset-0 bg-black z-50 font-minimal">
-      {/* Floating Action Button - Back to Menu */}
+    <div className="fixed inset-0 z-50 bg-black font-minimal md:static md:z-auto md:h-[calc(100vh-80px)]">
+      {/* Floating Action Button - Back to Menu (Mobile Only) */}
       <Link
         to="/menu"
         className="fixed bottom-6 right-6 z-50 bg-olchi-red text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-700 transition-colors flex items-center gap-2"
@@ -33,7 +33,7 @@ export default function Gallery() {
         pagination={{ clickable: true }}
         keyboard={{ enabled: true }}
         loop={true}
-        className="h-full w-full"
+        className="h-full w-full [&_.swiper-pagination]:!top-0 [&_.swiper-pagination]:!bottom-auto [&_.swiper-pagination]:mt-6"
         style={{
           "--swiper-theme-color": "#B13613",
           "--swiper-pagination-bullet-inactive-color": "#ffffff",
@@ -76,7 +76,7 @@ export default function Gallery() {
       </button>
 
       {/* Instructions Overlay (fades out) */}
-      <div className="absolute top-4 inset-x-0 text-center z-40 pointer-events-none opacity-60">
+      <div className="absolute bottom-32 inset-x-0 text-center z-40 pointer-events-none opacity-60">
         <p className="text-white text-xs md:text-sm shadow-sm inline-block px-3 py-1 bg-black/20 rounded-full backdrop-blur-sm">
           Swipe to navigate
         </p>

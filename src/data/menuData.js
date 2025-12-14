@@ -49,6 +49,13 @@ export const menuData = {
       description: "Crispy pan-fried dumplings stuffed with beef and vegetables"
     },
     {
+      name: "Gunmandu (veg)",
+      subtitle: "Pan-Fried Dumplings, Vegetable",
+      price: "8.50",
+      description: "Crispy pan-fried dumplings stuffed with vegetables",
+      isVegetarian: true
+    },
+    {
       name: "Haemul Pajeon",
       subtitle: "Seafood Pancake",
       price: "16.50",
@@ -64,10 +71,10 @@ export const menuData = {
 
   // For Menu.jsx and Menu2.jsx simplified version
   specials: [
-    { name: "Beef Bulgogi", price: "23.50", description: "Rice + 3 sides", isRecommended: false },
-    { name: "Spicy Pork Bulgogi", price: "21.50", description: "Rice + 3 sides", isRecommended: false },
-    { name: "Dakgangjeong", price: "21.50", description: "Rice + 3 sides", isRecommended: false },
-    { name: "Tofu Gangjeong", price: "20.50", description: "Rice + 3 sides", isRecommended: false }
+    { name: "Beef Bulgogi", price: "23.50", description: "Rice and side dishes", isRecommended: false },
+    { name: "Spicy Pork Bulgogi", price: "21.50", description: "Rice and side dishes", isRecommended: false },
+    { name: "Dakgangjeong", price: "21.50", description: "Rice and side dishes", isRecommended: false },
+    { name: "Tofu Gangjeong", price: "20.50", description: "Rice and side dishes", isRecommended: false }
   ],
 
   kimbap: [
@@ -108,7 +115,7 @@ export const menuData = {
 
   // For Menu.jsx and Menu2.jsx
   budaeJjigae: {
-    name: "Budae Jjigae (2인)",
+    name: "Budae Jjigae ",
     price: "37.50",
     description: "For Two",
     addOn: "Add Ramyun +$2.50",
@@ -118,16 +125,20 @@ export const menuData = {
   soondubuSimple: [
     { name: "Beef Soondubu", price: "17.50" },
     {
-      name: "Seafood, Combo Soondubu",
-      price: "18.50",
-      description: "Spicy soft tofu stew + rice"
+      name: "Seafood Soondubu",
+      price: "18.50"
+    },
+    {
+      name: "Combo Soondubu",
+      price: "18.50"
     }
   ],
 
   drinks: [
     { name: "Yuzu Sparkling Ade", price: "5.95" },
     { name: "Plum Sparkling Ade", price: "5.95" },
-    { name: "Soft Drinks / Water", price: "3.00" },
+    { name: "Bling Booster Yogurt Sparkling", price: "3.00" },
+    { name: "Soft Drinks / Water", price: "3.00" }
   ],
 
   // Additional info

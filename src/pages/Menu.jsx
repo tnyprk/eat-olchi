@@ -34,7 +34,7 @@ export function Menu() {
             {/* Specials */}
             <section>
               <h2 className="text-[#B13613] tracking-[0.2em] mb-2 pb-1 border-b-2 border-[#B13613]">SPECIALS</h2>
-              <p className="text-stone-500 text-xs italic mb-3">Rice + 3 sides</p>
+              <p className="text-stone-500 text-xs italic mb-3">Rice + side dishes</p>
               <div className="space-y-2">
                 {menuData.specials.map((item, index) => (
                   <div key={index} className="flex justify-between items-start">

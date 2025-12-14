@@ -3,7 +3,7 @@
 
 export const galleryData = [
   { filename: "OLCHI-1.jpg", title: "Gunmandu" },
-  { filename: "OLCHI-3.jpg", title: "Seafood Pancake" },
+  { filename: "OLCHI-3.jpg", title: "Haemul Pajeon" },
   { filename: "OLCHI-12.jpg", title: "Japchae" },
   { filename: "OLCHI-2.jpg", title: "Tuna Mayo Kimbap" },
   { filename: "OLCHI-6.jpg", title: "Yubu Kimbap" },
@@ -14,7 +14,7 @@ export const galleryData = [
   { filename: "OLCHI-26.jpg", title: "Sweet & Spicy Boneless KFC" },
   { filename: "OLCHI-29.jpg", title: "Donkatsu with Ssam" },
   { filename: "OLCHI-30.jpg", title: "Pork Bulgogi with Ssam" },
-  { filename: "OLCHI-31.jpg", title: "Sweet & Spicy Boneless KFC with Ssam" },
+  { filename: "OLCHI-31.jpg", title: "Sweet & Spicy Boneless Chicken Bites with Ssam" },
 
   { filename: "OLCHI-14.jpg", title: "Seafood Tofu Soup" },
   { filename: "OLCHI-15.jpg", title: "Seafood Tofu Soup and Japchae" },
@@ -32,5 +32,5 @@ export const galleryData = [
   { filename: "OLCHI-28.jpg", title: "Budaejjigae (Army Stew)" },
   { filename: "OLCHI-32.jpg", },
   { filename: "OLCHI-33.jpg", },
-  { filename: "OLCHI-7.jpg", title: "Yuzu Sparkling Lemonade" },
+  { filename: "OLCHI-7.jpg", title: "Yuzu Sparkling Ade" },
 ];
