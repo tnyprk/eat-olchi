@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Home, Utensils, Camera, Phone } from "lucide-react";
+import { Home, Utensils, Camera, Phone, Info } from "lucide-react";
 
 export function Navigation() {
   const navItems = [
@@ -7,6 +7,7 @@ export function Navigation() {
     { path: "/menu", label: "Menu", icon: Utensils },
     //{ path: "/menu", label: "New Menu", icon: Utensils },
     { path: "/gallery", label: "Gallery", icon: Camera },
+    { path: "/about", label: "About", icon: Info },
     { path: "/contact", label: "Contact", icon: Phone }
   ];
 

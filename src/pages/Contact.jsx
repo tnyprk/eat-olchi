@@ -105,26 +105,18 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Map */}
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-lg overflow-hidden border border-stone-300 h-64 md:h-80">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.584!2d-122.298915!3d37.957362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857e9c00000000%3A0x0!2s4068%20San%20Pablo%20Dam%20Rd%2C%20El%20Sobrante%2C%20CA%2094803!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Olchi Restaurant Location"
-            ></iframe>
-          </div>
-        </div>
-
         {/* Order Section */}
         <div className="max-w-4xl mx-auto mt-12">
           <h2 className="text-[#B13613] tracking-[0.3em] text-center mb-6 text-xl">ORDER OPTIONS</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {/* Active Button */}
+            <a
+              href="tel:5102835007"
+              className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
+            >
+              <div className="text-sm font-medium">Direct Pickup</div>
+              <div className="text-xs">Call Now</div>
+            </a>
             {/* Coming Soon Buttons */}
             <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
               <div className="text-sm font-medium">DoorDash</div>
@@ -138,14 +130,6 @@ export default function Contact() {
               <div className="text-sm font-medium">Grubhub</div>
               <div className="text-xs">Coming Soon</div>
             </button>
-            {/* Active Button */}
-            <a
-              href="tel:5102835007"
-              className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
-            >
-              <div className="text-sm font-medium">Direct Pickup</div>
-              <div className="text-xs">Call Now</div>
-            </a>
           </div>
         </div>
       </div>

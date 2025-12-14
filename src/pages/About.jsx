@@ -32,11 +32,6 @@ export default function About() {
               Since opening our doors in El Sobrante, we've been dedicated to bringing the warmth
               and flavors of Korean home cooking to our community.
             </p>
-            <p>
-              Every dish at OLCHI is prepared with the same care and attention we'd give to meals
-              for our own family. From our signature Budae Jjigae to our carefully crafted meal boxes,
-              each recipe tells a story of tradition, flavor, and love.
-            </p>
           </div>
         </div>
 
@@ -62,23 +57,37 @@ export default function About() {
         </div>
 
         {/* Story Section */}
-        <div className="max-w-2xl mx-auto bg-white/50 p-6 md:p-8 rounded-lg border border-stone-200">
-          <h2 className="text-[#B13613] tracking-[0.2em] mb-4 text-center">OUR STORY</h2>
-          <div className="text-stone-600 text-sm leading-relaxed space-y-3">
-            <p>
-              OLCHI began with a simple dream: to share the comforting flavors of Korean home cooking
-              with the El Sobrante community. Our name, inspired by the Korean word for "friendship,"
-              reflects our belief that food brings people together.
+        <div className="max-w-3xl mx-auto bg-white/50 p-6 md:p-8 rounded-lg border border-stone-200">
+          <h2 className="text-[#B13613] tracking-[0.2em] mb-6 text-center">OUR STORY</h2>
+          <div className="text-stone-600 text-sm leading-relaxed space-y-6">
+            <p className="font-medium text-base text-stone-800">
+              Olchi is a family story that started long before this location.
             </p>
+
             <p>
-              We source our ingredients carefully, partnering with local suppliers whenever possible
-              while staying true to authentic Korean flavors. Our banchan (side dishes) are made fresh
-              daily, and our stews simmer for hours to develop deep, complex flavors.
+              From 2002–2008, our parents owned and operated a Korean BBQ restaurant on Rodeo Street in Apgujeong, Seoul. Their specialty was charcoal-grilled galbisal and a deeply comforting budae jjigae—recipes built from repetition, instinct, and feeding the same customers again and again. Like many businesses at the time, the restaurant eventually closed due to the economic downturn.
             </p>
+
             <p>
-              Whether you're a longtime lover of Korean cuisine or trying it for the first time,
-              we invite you to experience the warmth and hospitality that makes OLCHI special.
-              Come hungry, leave happy, and come back soon.
+              After immigrating to the U.S., our family settled in the Bay Area. My mom worked across many Korean restaurants as a waitress, always carrying the same dream: to one day own a restaurant again. As an immigrant family, starting a business isn’t easy—but when this opportunity came up, we knew it was now or never.
+            </p>
+
+            <div className="bg-white/60 p-6 rounded border-l-4 border-[#B13613] my-6">
+              <p className="font-bold text-[#B13613] mb-2">Olchi is fully family-run.</p>
+              <ul className="space-y-1 list-disc list-inside">
+                <li>Our mom creates every recipe.</li>
+                <li>Our dad rebuilt the space—floors, walls, everything.</li>
+                <li>Tony handled the menu and website.</li>
+                <li>Olivia oversees the operation and menu composition.</li>
+              </ul>
+            </div>
+
+            <p>
+              Olchi (올치) means “that’s right.” And that’s exactly what we aim for—doing things the right way. Good ingredients, honest cooking, and food made the same way our mom cooks for family.
+            </p>
+
+            <p className="text-center font-medium text-lg text-[#B13613] pt-2 tracking-wide">
+              Come try us out. We think you’ll feel it.
             </p>
           </div>
         </div>
