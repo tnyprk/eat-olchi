@@ -46,7 +46,7 @@ export const menuData = {
       name: "Gunmandu",
       subtitle: "Pan-Fried Dumplings, Beef",
       price: "8.50",
-      description: "Crispy pan-fried dumplings stuffed with beef"
+      description: "Crispy pan-fried dumplings stuffed with beef and vegetables"
     },
     {
       name: "Haemul Pajeon",

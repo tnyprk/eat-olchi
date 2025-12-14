@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         header: ['"Playfair Display"', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
+        minimal: ['Outfit', 'sans-serif'],
       },
       colors: {
         olchi: {

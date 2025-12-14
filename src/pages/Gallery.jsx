@@ -1,142 +1,84 @@
-import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Utensils, ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y, Keyboard } from "swiper/modules";
 import { galleryData } from "../data/galleryData";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 export default function Gallery() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [imageCache, setImageCache] = useState(new Set());
-
-  const totalImages = galleryData.length;
-  const currentImage = galleryData[currentIndex];
-
-  // Memoized navigation functions
-  const nextImage = useCallback(() => {
-    setIsLoading(true);
-    setCurrentIndex((prev) => (prev + 1) % totalImages);
-  }, [totalImages]);
-
-  const prevImage = useCallback(() => {
-    setIsLoading(true);
-    setCurrentIndex((prev) => (prev - 1 + totalImages) % totalImages);
-  }, [totalImages]);
-
-  // Keyboard navigation with proper dependencies
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "ArrowLeft") prevImage();
-      if (e.key === "ArrowRight") nextImage();
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [prevImage, nextImage]);
-
-  // Preload only adjacent images for performance
-  useEffect(() => {
-    const prevIndex = (currentIndex - 1 + totalImages) % totalImages;
-    const nextIndex = (currentIndex + 1) % totalImages;
-
-    [prevIndex, nextIndex].forEach((index) => {
-      const filename = galleryData[index].filename;
-      if (!imageCache.has(filename)) {
-        const img = new Image();
-        img.src = `/${filename}`;
-        img.onload = () => {
-          setImageCache((prev) => new Set(prev).add(filename));
-        };
-      }
-    });
-  }, [currentIndex, totalImages, imageCache]);
-
-  // Touch handling for mobile
-  const [touchStart, setTouchStart] = useState(null);
-
-  const handleTouchStart = useCallback((e) => {
-    setTouchStart(e.touches[0].clientX);
-  }, []);
-
-  const handleTouchEnd = useCallback(
-    (e) => {
-      if (!touchStart) return;
-
-      const touchEnd = e.changedTouches[0].clientX;
-      const diff = touchStart - touchEnd;
-
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          nextImage();
-        } else {
-          prevImage();
-        }
-      }
-      setTouchStart(null);
-    },
-    [touchStart, nextImage, prevImage]
-  );
-
   return (
-    <div className="min-h-screen bg-gray-100 py-4 md:py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Lightweight Container */}
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-          {/* Image Display */}
-          <div
-            className="relative bg-black"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            {/* Main Image */}
-            <div className="relative aspect-[4/3] md:aspect-[16/9]">
-              {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-10 h-10 border-3 border-olchi-red border-t-transparent rounded-full animate-spin" />
-                </div>
-              )}
+    <div className="fixed inset-0 bg-black z-50 font-minimal">
+      {/* Floating Action Button - Back to Menu */}
+      <Link
+        to="/menu"
+        className="fixed bottom-6 right-6 z-50 bg-olchi-red text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-700 transition-colors flex items-center gap-2"
+        aria-label="Back to Menu"
+      >
+        <Utensils className="w-5 h-5" />
+        <span className="font-light tracking-wide">Back to Menu</span>
+      </Link>
+
+      <Swiper
+        modules={[Navigation, Pagination, A11y, Keyboard]}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation={{
+          prevEl: ".custom-prev-button",
+          nextEl: ".custom-next-button",
+        }}
+        pagination={{ clickable: true }}
+        keyboard={{ enabled: true }}
+        loop={true}
+        className="h-full w-full"
+        style={{
+          "--swiper-theme-color": "#B13613",
+          "--swiper-pagination-bullet-inactive-color": "#ffffff",
+          "--swiper-pagination-bullet-inactive-opacity": "0.5",
+        }}
+      >
+        {galleryData.map((item, index) => (
+          <SwiperSlide key={index} className="relative h-full w-full bg-black">
+            <div className="w-full h-full flex items-center justify-center">
               <img
-                key={currentImage.filename}
-                src={`/${currentImage.filename}`}
-                alt={currentImage.title}
-                className="w-full h-full object-contain"
-                onLoad={() => setIsLoading(false)}
-                style={{ display: isLoading ? "none" : "block" }}
+                src={`/${item.filename}`}
+                alt={item.title}
+                className="max-h-full max-w-full object-contain"
+                loading="lazy"
               />
+              {/* Title Overlay - Gradient at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-8 md:p-12 pointer-events-none pb-24 md:pb-12">
+                <h2 className="text-white text-xl md:text-3xl text-center font-light uppercase tracking-widest">
+                  {item.title}
+                </h2>
+              </div>
             </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevImage}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 md:p-3 rounded-full transition-colors"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="w-5 h-5 md:w-7 md:h-7" />
-            </button>
+      {/* Custom Navigation Buttons */}
+      <button
+        className="custom-prev-button absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-50 bg-black/40 hover:bg-black/60 text-white p-3 md:p-4 rounded-full transition-all cursor-pointer backdrop-blur-sm"
+        aria-label="Previous image"
+      >
+        <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+      </button>
 
-            <button
-              onClick={nextImage}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 md:p-3 rounded-full transition-colors"
-              aria-label="Next image"
-            >
-              <ChevronRight className="w-5 h-5 md:w-7 md:h-7" />
-            </button>
+      <button
+        className="custom-next-button absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 bg-black/40 hover:bg-black/60 text-white p-3 md:p-4 rounded-full transition-all cursor-pointer backdrop-blur-sm"
+        aria-label="Next image"
+      >
+        <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+      </button>
 
-            {/* Counter */}
-            <div className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1.5 rounded-full text-sm font-medium">
-              {currentIndex + 1} / {totalImages}
-            </div>
-
-            {/* Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 md:p-6">
-              <h2 className="text-white text-lg md:text-2xl font-semibold text-center">
-                {currentImage.title}
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        {/* Simple Instructions */}
-        <p className="text-center mt-4 text-gray-500 text-sm">
-          Use arrow keys or swipe to navigate
+      {/* Instructions Overlay (fades out) */}
+      <div className="absolute top-4 inset-x-0 text-center z-40 pointer-events-none opacity-60">
+        <p className="text-white text-xs md:text-sm shadow-sm inline-block px-3 py-1 bg-black/20 rounded-full backdrop-blur-sm">
+          Swipe to navigate
         </p>
       </div>
     </div>
