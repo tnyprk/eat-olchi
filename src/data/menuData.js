@@ -63,6 +63,13 @@ export const menuData = {
         "Crispy seafood pancake with squid, clams, mussels, and shrimp"
     },
     {
+      name: "Kimchi Pajeon",
+      subtitle: "Kimchi Pancake",
+      price: "16.50",
+      description:
+        "Crispy kimchi pancake."
+    },
+    {
       name: "Kimchi Fried Rice",
       price: "16.50",
       description: "Kimchi fried rice with spam. Add mozzarella cheese for $1.00"

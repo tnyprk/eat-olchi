@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export function StickyCategoryNav({ categories, activeCategory, onSelectCategory }) {
     return (
-        <div className="sticky top-[40px] md:top-[60px] z-40 bg-white/95 backdrop-blur-sm border-b border-stone-200 overflow-x-auto no-scrollbar">
+        <div className="sticky top-[40px] md:top-[56px] z-40 bg-white/95 backdrop-blur-sm border-b border-stone-200 overflow-x-auto no-scrollbar">
             <div className="flex px-4 md:px-8 max-w-7xl mx-auto space-x-6 min-w-max">
                 {categories.map((category) => (
                     <button
