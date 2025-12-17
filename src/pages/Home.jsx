@@ -3,6 +3,13 @@ import { MenuFooter } from "../components/MenuFooter";
 export default function Home() {
   const deliveryPlatforms = [
     {
+      name: "Direct Pickup",
+      url: "tel:5102835007",
+      color: "bg-[#B13613] hover:bg-[#8a2a0f]",
+      icon: "📞",
+      available: true
+    },
+    {
       name: "DoorDash",
       color: "bg-gray-300",
       icon: "🛵",
@@ -19,13 +26,6 @@ export default function Home() {
       color: "bg-gray-300",
       icon: "🍔",
       available: false
-    },
-    {
-      name: "Direct Pickup",
-      url: "tel:5102835007",
-      color: "bg-[#B13613] hover:bg-[#8a2a0f]",
-      icon: "📞",
-      available: true
     }
   ];
 
