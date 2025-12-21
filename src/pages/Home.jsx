@@ -11,9 +11,10 @@ export default function Home() {
     },
     {
       name: "DoorDash",
-      color: "bg-gray-300",
+      url: "https://www.doordash.com/store/olchi-el-sobrante-38482084/87548586/",
+      color: "bg-[#FF3008] hover:bg-[#d92907]",
       icon: "🛵",
-      available: false
+      available: true
     },
     {
       name: "Uber Eats",
@@ -23,9 +24,10 @@ export default function Home() {
     },
     {
       name: "Grubhub",
-      color: "bg-gray-300",
+      url: "https://grubhub.com/restaurant/olchi-4068-san-pablo-dam-rd-el-sobrante/13406424?classicAffiliateId=%2Fr%2Fw%2F13406424%2F&utm_source=restaurant.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=13406424",
+      color: "bg-[#FC6200] hover:bg-[#d65200]",
       icon: "🍔",
-      available: false
+      available: true
     }
   ];
 
