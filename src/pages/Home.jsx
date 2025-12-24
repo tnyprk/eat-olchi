@@ -17,17 +17,17 @@ export default function Home() {
       available: true
     },
     {
-      name: "Uber Eats",
-      color: "bg-gray-300",
-      icon: "🍴",
-      available: false
-    },
-    {
       name: "Grubhub",
       url: "https://grubhub.com/restaurant/olchi-4068-san-pablo-dam-rd-el-sobrante/13406424?classicAffiliateId=%2Fr%2Fw%2F13406424%2F&utm_source=restaurant.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=13406424",
       color: "bg-[#FC6200] hover:bg-[#d65200]",
       icon: "🍔",
       available: true
+    },
+    {
+      name: "Uber Eats",
+      color: "bg-gray-300",
+      icon: "🍴",
+      available: false
     }
   ];
 
@@ -52,7 +52,7 @@ export default function Home() {
                   <a
                     key={index}
                     href={platform.url}
-                    className={`${platform.color} text-white px-8 py-6 md:py-8 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-3 text-xl md:text-2xl font-medium`}
+                    className={`${platform.color} text-white px-4 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-3 text-xl md:text-2xl font-medium h-32 w-full`}
                   >
                     <span className="text-3xl">{platform.icon}</span>
                     {platform.name}
@@ -60,7 +60,7 @@ export default function Home() {
                 ) : (
                   <div
                     key={index}
-                    className={`${platform.color} text-gray-500 px-8 py-6 md:py-8 rounded-lg shadow flex flex-col items-center justify-center gap-2 cursor-not-allowed opacity-60`}
+                    className={`${platform.color} text-gray-500 px-4 rounded-lg shadow flex flex-col items-center justify-center gap-2 cursor-not-allowed opacity-60 h-32 w-full`}
                   >
                     <div className="flex items-center gap-3 text-xl md:text-2xl font-medium">
                       <span className="text-3xl">{platform.icon}</span>

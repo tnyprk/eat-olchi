@@ -57,7 +57,7 @@ export default function Contact() {
               (510) 283-5007
             </p>
             <p className="text-stone-600 text-sm">
-              Call us for reservations or takeout orders
+              Call us for reservations or pickup orders
             </p>
           </div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto mt-12">
           <h2 className="text-[#B13613] tracking-[0.3em] text-center mb-6 text-xl">ORDER OPTIONS</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {/* Active Button */}
+            {/* Active Buttons */}
             <a
               href="tel:5102835007"
               className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
@@ -117,17 +117,27 @@ export default function Contact() {
               <div className="text-sm font-medium">Direct Pickup</div>
               <div className="text-xs">Call Now</div>
             </a>
-            {/* Coming Soon Buttons */}
-            <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
+            <a
+              href="https://www.doordash.com/store/olchi-el-sobrante-38482084/87548586/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FF3008] text-white py-3 rounded hover:bg-[#d92907] transition-colors font-medium text-center flex flex-col items-center justify-center"
+            >
               <div className="text-sm font-medium">DoorDash</div>
-              <div className="text-xs">Coming Soon</div>
-            </button>
+              <div className="text-xs">Order Online</div>
+            </a>
+            <a
+              href="https://grubhub.com/restaurant/olchi-4068-san-pablo-dam-rd-el-sobrante/13406424?classicAffiliateId=%2Fr%2Fw%2F13406424%2F&utm_source=restaurant.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=13406424"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FC6200] text-white py-3 rounded hover:bg-[#d65200] transition-colors font-medium text-center flex flex-col items-center justify-center"
+            >
+              <div className="text-sm font-medium">Grubhub</div>
+              <div className="text-xs">Order Online</div>
+            </a>
+            {/* Disabled Button */}
             <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
               <div className="text-sm font-medium">Uber Eats</div>
-              <div className="text-xs">Coming Soon</div>
-            </button>
-            <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
-              <div className="text-sm font-medium">Grubhub</div>
               <div className="text-xs">Coming Soon</div>
             </button>
           </div>
