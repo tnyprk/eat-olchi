@@ -70,12 +70,14 @@ export const menuData = {
       subtitle: "Kimchi Pancake",
       price: "16.50",
       description:
-        "Crispy kimchi pancake."
+        "Crispy kimchi pancake.",
+      image: "/KIMCHI-1.jpg"
     },
     {
       name: "Kimchi Fried Rice",
       price: "16.50",
-      description: "Kimchi fried rice with spam. Add mozzarella cheese for $1.00"
+      description: "Kimchi fried rice with spam. Add mozzarella cheese for $1.00",
+      image: "/KIMCHI-3.jpg"
     }
   ],
 

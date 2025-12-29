@@ -33,4 +33,7 @@ export const galleryData = [
   { filename: "OLCHI-32.jpg", },
   { filename: "OLCHI-33.jpg", },
   { filename: "OLCHI-7.jpg", title: "Yuzu Sparkling Ade" },
+  { filename: "KIMCHI-1.jpg", title: "Kimchi Pajeon" },
+  { filename: "KIMCHI-3.jpg", title: "Kimchi Fried Rice" },
+  { filename: "KIMCHI-4.jpg", title: "Kimchi Fried Rice w/ Mozzarella Cheese" },
 ];
