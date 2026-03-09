@@ -35,7 +35,7 @@ const deliveryPlatforms = [
 
 export default function Home() {
   return (
-    <div className="min-h-[calc(100vh-140px)] bg-[#F7EDDA] flex flex-col">
+    <div className="min-h-[calc(100vh-64px)] bg-[#F7EDDA] flex flex-col">
       <div className="flex-1 flex flex-col justify-center items-center py-8 md:py-12">
         <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
           {/* Logo Section */}
@@ -84,11 +84,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Footer - Separate Section */}
-        <div className="py-4">
-          <MenuFooter />
-        </div>
+      {/* Footer */}
+      <div className="py-4 px-4">
+        <MenuFooter />
       </div>
     </div>
   );
