@@ -1,5 +1,11 @@
 import { MenuFooter } from "../components/MenuFooter";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { storeData } from "../data/storeData";
+import { formatPhone, groupHours } from "../utils/formatters";
+
+const { address, phone, email, hours, delivery } = storeData;
+const hoursGroups = groupHours(hours);
+const addressQuery = encodeURIComponent(`${address.street},${address.city},${address.state}`);
 
 export default function Contact() {
   return (
@@ -22,12 +28,12 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">LOCATION</h2>
             </div>
             <p className="text-stone-700 leading-relaxed mb-3">
-              4068 San Pablo Dam Rd<br />
-              El Sobrante, CA 94803
+              {address.street}<br />
+              {address.city}, {address.state} {address.zip}
             </p>
             <div className="flex flex-col gap-2">
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=4068+San+Pablo+Dam+Rd,El+Sobrante,CA"
+                href={`https://www.google.com/maps/dir/?api=1&destination=${addressQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#B13613] text-sm hover:underline"
@@ -35,7 +41,7 @@ export default function Contact() {
                 Get Directions (Google Maps) →
               </a>
               <a
-                href="https://maps.apple.com/?daddr=4068+San+Pablo+Dam+Rd,El+Sobrante,CA"
+                href={`https://maps.apple.com/?daddr=${addressQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#B13613] text-sm hover:underline"
@@ -54,7 +60,7 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">PHONE</h2>
             </div>
             <p className="text-stone-700 mb-3">
-              (510) 283-5007
+              {formatPhone(phone)}
             </p>
             <p className="text-stone-600 text-sm">
               Call us for reservations or pickup orders
@@ -70,21 +76,20 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">HOURS</h2>
             </div>
             <div className="space-y-2 text-stone-700">
-              <div className="flex justify-between">
-                <span>Mon - Thu (월~목)</span>
-                <div className="text-right">
-                  <div>11:00 AM - 2:30 PM</div>
-                  <div>4:00 PM - 8:30 PM</div>
+              {hoursGroups.map((group) => (
+                <div key={group.label} className="flex justify-between">
+                  <span>{group.label}</span>
+                  {group.hours?.break ? (
+                    <div className="text-right">
+                      {group.formatted.split(", ").map((part, i) => (
+                        <div key={i}>{part}</div>
+                      ))}
+                    </div>
+                  ) : (
+                    <span className={!group.hours ? "text-stone-500" : ""}>{group.formatted}</span>
+                  )}
                 </div>
-              </div>
-              <div className="flex justify-between">
-                <span>Fri - Sat (금~토)</span>
-                <span>11:00 AM - 8:30 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span className="text-stone-500">Closed</span>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -97,7 +102,7 @@ export default function Contact() {
               <h2 className="text-[#B13613] tracking-wider">EMAIL</h2>
             </div>
             <p className="text-stone-700 mb-3">
-              info@eat-olchi.com
+              {email}
             </p>
             <p className="text-stone-600 text-sm">
               Questions? Catering inquiries? Send us an email
@@ -111,14 +116,14 @@ export default function Contact() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {/* Active Buttons */}
             <a
-              href="tel:5102835007"
+              href={`tel:${phone}`}
               className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
             >
               <div className="text-sm font-medium">Direct Pickup</div>
               <div className="text-xs">Call Now</div>
             </a>
             <a
-              href="https://www.doordash.com/store/olchi-el-sobrante-38482084/87548586/"
+              href={delivery.doordash}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FF3008] text-white py-3 rounded hover:bg-[#d92907] transition-colors font-medium text-center flex flex-col items-center justify-center"
@@ -127,7 +132,7 @@ export default function Contact() {
               <div className="text-xs">Order Online</div>
             </a>
             <a
-              href="https://grubhub.com/restaurant/olchi-4068-san-pablo-dam-rd-el-sobrante/13406424?classicAffiliateId=%2Fr%2Fw%2F13406424%2F&utm_source=restaurant.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=13406424"
+              href={delivery.grubhub}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FC6200] text-white py-3 rounded hover:bg-[#d65200] transition-colors font-medium text-center flex flex-col items-center justify-center"

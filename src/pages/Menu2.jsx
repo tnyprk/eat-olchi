@@ -4,9 +4,9 @@ import { menuData } from "../data/menuData";
 
 export default function Menu2() {
   return (
-    <div className="min-h-screen bg-white md:bg-gray-100 flex items-start justify-center p-0 md:p-8 font-body print:p-0 print:bg-white">
+    <div className="min-h-screen bg-white flex items-start justify-center p-0 md:p-8 font-body print:p-0 print:bg-white">
       {/* Half Page Container (5.5" x 8.5") */}
-      <div className="w-[5.5in] h-[8.5in] mx-auto bg-olchi-bg px-5 py-8 flex flex-col shadow-none md:shadow-xl print:shadow-none print:w-[5.5in] print:h-[8.5in] print:m-0 overflow-hidden relative">
+      <div className="w-[5.5in] h-[8.5in] mx-auto bg-olchi-bg px-5 py-8 flex flex-col shadow-none md:shadow-xl border border-gray-300 print:shadow-none print:w-[5.5in] print:h-[8.5in] print:m-0 overflow-hidden relative">
 
         {/* Minimal Header - Logo Centered */}
         <div className="flex flex-col items-center justify-center mb-6 gap-3">

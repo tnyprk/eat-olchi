@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import { storeData } from "../data/storeData";
 
 export function AnnouncementBanner() {
   return (
@@ -7,7 +8,7 @@ export function AnnouncementBanner() {
         <div className="flex items-center gap-2">
           <Sparkles className="w-5 h-5" />
           <span className="font-semibold text-lg">
-            We're OPEN! Visit us for our grand opening specials
+            {storeData.announcement}
           </span>
         </div>
       </div>

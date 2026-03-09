@@ -1,6 +1,11 @@
 import { MenuFooter } from "../components/MenuFooter";
 import { Star, Leaf } from "lucide-react";
 import { menuData } from "../data/menuData";
+import { storeData } from "../data/storeData";
+import { formatPhone, groupHours } from "../utils/formatters";
+
+const { address, phone, hours } = storeData;
+const hoursGroups = groupHours(hours);
 
 export default function Menu() {
   return (
@@ -126,27 +131,36 @@ export default function Menu() {
             <section className="bg-white/50 p-4 rounded-lg border border-stone-200">
               <h2 className="text-[#B13613] tracking-[0.2em] mb-3 pb-2 border-b border-stone-300">HOURS</h2>
               <div className="space-y-2 text-sm text-stone-700 mb-4">
-                <div>
-                  <div className="font-medium">Mon-Thu (월~목)</div>
-                  <div className="text-xs text-stone-600 pl-2">
-                    <div>11am - 2:30pm</div>
-                    <div>4pm - 9:30pm</div>
+                {hoursGroups.map((group) => (
+                  <div key={group.label}>
+                    {group.hours?.break ? (
+                      <>
+                        <div className="font-medium">{group.label}</div>
+                        <div className="text-xs text-stone-600 pl-2">
+                          {group.formatted.split(", ").map((part, i) => (
+                            <div key={i}>{part}</div>
+                          ))}
+                        </div>
+                      </>
+                    ) : !group.hours ? (
+                      <div className="flex justify-between">
+                        <span>{group.label}</span>
+                        <span>Closed</span>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="font-medium">{group.label}</div>
+                        <div className="text-xs text-stone-600 pl-2">{group.formatted}</div>
+                      </>
+                    )}
                   </div>
-                </div>
-                <div>
-                  <div className="font-medium">Fri-Sat (금~토)</div>
-                  <div className="text-xs text-stone-600 pl-2">11am - 9:30pm</div>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
-                </div>
+                ))}
               </div>
 
               <h2 className="text-[#B13613] tracking-[0.2em] mb-2 pb-2 border-b border-stone-300">CONTACT</h2>
               <div className="space-y-2 text-sm text-stone-700">
-                <p>(510) 283-5007</p>
-                <p className="text-xs leading-relaxed">4068 San Pablo Dam Rd<br />El Sobrante, CA</p>
+                <p>{formatPhone(phone)}</p>
+                <p className="text-xs leading-relaxed">{address.street}<br />{address.city}, {address.state}</p>
               </div>
             </section>
 
@@ -187,7 +201,7 @@ export default function Menu() {
                 </button>
                 {/* Active Button */}
                 <a
-                  href="tel:5102835007"
+                  href={`tel:${phone}`}
                   className="block w-full bg-[#B13613] text-white py-2 rounded hover:bg-[#8a2a0f] transition-colors text-center"
                 >
                   <div className="font-medium">Direct Pickup</div>

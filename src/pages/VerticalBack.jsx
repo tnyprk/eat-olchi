@@ -2,7 +2,7 @@ import React from "react";
 
 export default function VerticalBack() {
     return (
-        <div className="min-h-screen bg-white md:bg-gray-100 flex items-start justify-center p-0 md:p-8 font-body print:p-0 print:bg-white">
+        <div className="min-h-screen bg-white flex items-start justify-center p-0 md:p-8 font-body print:p-0 print:bg-white">
             {/* Half Page Container (5.5" x 8.5") */}
             <div className="w-[5.5in] h-[8.5in] mx-auto bg-olchi-bg px-8 py-12 flex flex-col items-center justify-center text-center shadow-none md:shadow-xl print:shadow-none print:w-[5.5in] print:h-[8.5in] print:m-0 border-none md:border border-[#D3C7B5] print:border-none">
 

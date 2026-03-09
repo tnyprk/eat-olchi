@@ -39,6 +39,11 @@ export const menuData = {
       isRecommended: false,
       isSpicy: false,
       isVegetarian: false
+    },
+    {
+      name: "Beef Kalbi",
+      price: "38.50",
+      description: "Tender, smoky grilled short ribs marinated in sweet soy, garlic, and Asian pear"
     }
   ],
 
@@ -61,16 +66,14 @@ export const menuData = {
       name: "Haemul Pajeon",
       subtitle: "Seafood Pancake",
       price: "16.50",
-      description:
-        "Crispy seafood pancake with squid, clams, mussels, and shrimp",
+      description: "Crispy seafood pancake with squid, clams, mussels, and shrimp",
       image: "/OLCHI-4.jpg"
     },
     {
       name: "Kimchi Pajeon",
       subtitle: "Kimchi Pancake",
       price: "16.50",
-      description:
-        "Crispy kimchi pancake.",
+      description: "Crispy kimchi pancake.",
       image: "/KIMCHI-1.jpg"
     },
     {
@@ -90,12 +93,7 @@ export const menuData = {
   ],
 
   kimbap: [
-    {
-      name: "Tuna Mayo Kimbap",
-      price: "16.50",
-      isRecommended: true,
-      image: "/OLCHI-2.jpg"
-    },
+    { name: "Tuna Mayo Kimbap", price: "16.50", isRecommended: true, image: "/OLCHI-2.jpg" },
     {
       name: "Yubu Kimbap",
       subtitle: "Tofu Pocket Roll",
@@ -103,7 +101,7 @@ export const menuData = {
       price: "15.50",
       isRecommended: false,
       isVegetarian: true
-    },
+    }
   ],
 
   specialty: {
@@ -114,15 +112,17 @@ export const menuData = {
       "Hearty, spicy Korean army stew—hotpot made to share with napa cabbage, onion, beans, spam, sausage, cheese, tofu, and ground beef. Add ramen noodles for +$2.50",
     isBest: true,
     isSpicy: true,
-    image: "/OLCHI-33.jpg"
+    image: "/OLCHI-33.jpg",
+    isRecommended: true
   },
 
   soondubu: {
-    description: "Spicy soft tofu soup served with rice & side dishes. Zucchini, onion, and scallions in a rich, spicy broth",
+    description:
+      "Spicy soft tofu soup served with rice & side dishes. Zucchini, onion, and scallions in a rich, spicy broth",
     items: [
       { name: "Beef", price: "17.50" },
       { name: "Seafood", price: "18.50" },
-      { name: "Combo", price: "18.50" },
+      { name: "Combo", price: "18.50" }
     ],
     note: "*Raw egg available upon request",
     image: "/OLCHI-15.jpg"
@@ -139,14 +139,8 @@ export const menuData = {
 
   soondubuSimple: [
     { name: "Beef Soondubu", price: "17.50" },
-    {
-      name: "Seafood Soondubu",
-      price: "18.50"
-    },
-    {
-      name: "Combo Soondubu",
-      price: "18.50"
-    }
+    { name: "Seafood Soondubu", price: "18.50" },
+    { name: "Combo Soondubu", price: "18.50" }
   ],
 
   drinks: [
@@ -158,10 +152,8 @@ export const menuData = {
 
   // Additional info
   mealBoxesImage: "/OLCHI-20.jpg",
-  mealBoxesNote:
-    "Served with rice & side dishes • Ssam (assorted vegetables) set available for +$3.00",
+  mealBoxesNote: "Served with rice & side dishes • Ssam (assorted vegetables) set available for +$3.00",
   kimbapNote:
     "Rolled rice with vegetables & sesame oil • Contains pickled radish, burdock root, egg, cucumber, fish cake, carrot, sesame oil & sesame seeds",
-  specialsNote:
-    "Add 'ssam' (romaine, cucumber, carrot, ssamjang) +$3.00"
+  specialsNote: "Add 'ssam' (romaine, cucumber, carrot, ssamjang) +$3.00"
 };
