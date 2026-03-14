@@ -116,11 +116,13 @@ export default function Contact() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {/* Active Buttons */}
             <a
-              href={`tel:${phone}`}
-              className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
+              href={delivery.ubereats}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#06C167] text-white py-3 rounded hover:bg-[#05A055] transition-colors font-medium text-center flex flex-col items-center justify-center"
             >
-              <div className="text-sm font-medium">Direct Pickup</div>
-              <div className="text-xs">Call Now</div>
+              <div className="text-sm font-medium">Uber Eats</div>
+              <div className="text-xs">No fee pickup</div>
             </a>
             <a
               href={delivery.doordash}
@@ -140,11 +142,13 @@ export default function Contact() {
               <div className="text-sm font-medium">Grubhub</div>
               <div className="text-xs">Order Online</div>
             </a>
-            {/* Disabled Button */}
-            <button disabled className="bg-gray-300 text-gray-500 py-3 rounded cursor-not-allowed opacity-60 relative">
-              <div className="text-sm font-medium">Uber Eats</div>
-              <div className="text-xs">Coming Soon</div>
-            </button>
+            <a
+              href={`tel:${phone}`}
+              className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
+            >
+              <div className="text-sm font-medium">Direct Pickup</div>
+              <div className="text-xs">Call Now</div>
+            </a>
           </div>
         </div>
       </div>

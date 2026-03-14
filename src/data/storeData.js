@@ -38,7 +38,9 @@ export const storeData = {
   delivery: {
     doordash: "https://www.doordash.com/store/olchi-el-sobrante-38482084/87548586/",
     grubhub:
-      "https://grubhub.com/restaurant/olchi-4068-san-pablo-dam-rd-el-sobrante/13406424?classicAffiliateId=%2Fr%2Fw%2F13406424%2F&utm_source=restaurant.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=13406424"
+      "https://grubhub.com/restaurant/olchi-4068-san-pablo-dam-rd-el-sobrante/13406424?classicAffiliateId=%2Fr%2Fw%2F13406424%2F&utm_source=restaurant.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=13406424",
+    ubereats:
+      "https://www.order.store/store/olchi-el-sobrante/0TBTCQBRU9awJXDSqC6nRQ"
   },
 
   announcement: "We're OPEN! Visit us for our grand opening specials",

@@ -5,10 +5,11 @@ const { phone, delivery } = storeData;
 
 const deliveryPlatforms = [
   {
-    name: "Direct Pickup",
-    url: `tel:${phone}`,
-    color: "bg-[#4A5568] hover:bg-[#2D3748]",
-    icon: "/icons/phone.svg",
+    name: "Uber Eats",
+    url: delivery.ubereats,
+    color: "bg-[#06C167] hover:bg-[#05A055]",
+    icon: "/icons/ubereats.svg",
+    subtitle: "No fee pickup",
     available: true
   },
   {
@@ -26,10 +27,11 @@ const deliveryPlatforms = [
     available: true
   },
   {
-    name: "Uber Eats",
-    color: "bg-[#06C167] hover:bg-[#05A055]",
-    icon: "/icons/ubereats.svg",
-    available: false
+    name: "Direct Pickup",
+    url: `tel:${phone}`,
+    color: "bg-[#4A5568] hover:bg-[#2D3748]",
+    icon: "/icons/phone.svg",
+    available: true
   }
 ];
 
@@ -55,14 +57,19 @@ export default function Home() {
                   <a
                     key={index}
                     href={platform.url}
-                    className={`${platform.color} text-white px-4 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-3 text-xl md:text-2xl font-medium h-32 w-full`}
+                    className={`${platform.color} text-white px-4 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 flex flex-col items-center justify-center gap-1 text-xl md:text-2xl font-medium h-32 w-full`}
                   >
-                    <img
-                      src={platform.icon}
-                      alt=""
-                      className="w-8 h-8 invert"
-                    />
-                    {platform.name}
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={platform.icon}
+                        alt=""
+                        className="w-8 h-8 invert"
+                      />
+                      {platform.name}
+                    </div>
+                    {platform.subtitle && (
+                      <span className="text-sm font-normal opacity-90">{platform.subtitle}</span>
+                    )}
                   </a>
                 ) : (
                   <div

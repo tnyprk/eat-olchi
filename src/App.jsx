@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import VerticalBack from "./pages/VerticalBack";
 import HorizontalBack from "./pages/HorizontalBack";
+import Catering from "./pages/Catering";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/verticalBack" element={<VerticalBack />} />
           <Route path="/horizontalBack" element={<HorizontalBack />} />
+          <Route path="/catering" element={<Catering />} />
         </Routes>
       </div>
     </Router>
