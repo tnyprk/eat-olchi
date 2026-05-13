@@ -36,4 +36,10 @@ export const galleryData = [
   { filename: "KIMCHI-1.jpg", title: "Kimchi Pajeon" },
   { filename: "KIMCHI-3.jpg", title: "Kimchi Fried Rice" },
   { filename: "KIMCHI-4.jpg", title: "Kimchi Fried Rice w/ Mozzarella Cheese" },
+
+  { filename: "KALBI.jpg", title: "Beef Kalbi" },
+  { filename: "FC_ORIGINAL.jpg", title: "Original Korean Fried Chicken" },
+  { filename: "FC_ORIGINAL_0.jpg", title: "Spicy Korean Fried Chicken" },
+  { filename: "FC_SPICY.jpg", title: "Sweet & Spicy Korean Fried Chicken" },
+  { filename: "FC_SOY_GARLIC.jpg", title: "Soy & Garlic Korean Fried Chicken" },
 ];

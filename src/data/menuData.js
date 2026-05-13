@@ -43,9 +43,72 @@ export const menuData = {
     {
       name: "Beef Kalbi",
       price: "38.50",
-      description: "Tender, smoky grilled short ribs marinated in sweet soy, garlic, and Asian pear"
+      description: "Tender, smoky grilled short ribs marinated in sweet soy, garlic, and Asian pear",
+      image: "/KALBI_ZOOMED.jpg"
     }
   ],
+
+  friedChicken: {
+    note: "Korean fried chicken wings • Served by piece count",
+    items: [
+      {
+        name: "Original",
+        description: "Crispy plain Korean fried chicken wings",
+        sizes: [
+          { label: "S (6pc)", price: "14.00" },
+          { label: "M (12pc)", price: "26.00" },
+          { label: "L (18pc)", price: "39.00" }
+        ],
+        image: "FC_ORIGINAL.jpg"
+      },
+      {
+        name: "Spicy",
+        description: "Crispy wings with a spicy batter — no sauce",
+        isSpicy: true,
+        sizes: [
+          { label: "S (6pc)", price: "14.00" },
+          { label: "M (12pc)", price: "26.00" },
+          { label: "L (18pc)", price: "39.00" }
+        ],
+        image: "FC_ORIGINAL_0.jpg"
+      },
+      {
+        name: "Sweet & Spicy",
+        description: "Crispy wings tossed in sweet gochujang glaze",
+        isSpicy: true,
+        sizes: [
+          { label: "S (6pc)", price: "15.00" },
+          { label: "M (12pc)", price: "28.00" },
+          { label: "L (18pc)", price: "42.00" }
+        ],
+        image: "FC_SPICY.jpg"
+      },
+      {
+        name: "Soy & Garlic",
+        description: "Crispy wings tossed in savory soy & garlic glaze",
+        sizes: [
+          { label: "S (6pc)", price: "15.00" },
+          { label: "M (12pc)", price: "28.00" },
+          { label: "L (18pc)", price: "42.00" }
+        ],
+        image: "FC_SOY_GARLIC.jpg"
+      },
+      {
+        name: "Onion Ring",
+        price: "5.00"
+      }
+    ],
+    combo: {
+      name: "Combo",
+      description: "Any small wings + 1 Pat Bottle Beer (Terra 1.5L)",
+      price: "30.00"
+    },
+    partyTray: {
+      name: "Party Tray",
+      description: "80 pcs",
+      price: "150.00"
+    }
+  },
 
   appetizers: [
     {

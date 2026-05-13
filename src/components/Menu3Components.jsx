@@ -52,7 +52,9 @@ export function MenuItemCard({ item }) {
                         <h3 className="font-bold text-stone-900 leading-tight group-hover:text-[#B13613] transition-colors">
                             {item.name}
                         </h3>
-                        <span className="text-stone-900 font-semibold">{item.price}</span>
+                        {item.price && (
+                            <span className="text-stone-900 font-semibold">{item.price}</span>
+                        )}
                     </div>
 
                     {item.subtitle && (
@@ -87,6 +89,20 @@ export function MenuItemCard({ item }) {
                             {item.description}
                         </p>
                     )}
+
+                    {item.sizes && (
+                        <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+                            {item.sizes.map((size) => (
+                                <div
+                                    key={size.label}
+                                    className="bg-stone-50 border border-stone-200 rounded px-2 py-1.5 text-center"
+                                >
+                                    <div className="text-stone-500 font-medium">{size.label}</div>
+                                    <div className="text-stone-900 font-semibold">${size.price}</div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -97,6 +113,10 @@ export function MenuItemCard({ item }) {
                         src={`/${item.image}`}
                         alt={item.name}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        style={{
+                            ...(item.imagePosition && { objectPosition: item.imagePosition }),
+                            ...(item.imageZoom && { transform: `scale(${item.imageZoom})` })
+                        }}
                     />
                 </div>
             ) : (

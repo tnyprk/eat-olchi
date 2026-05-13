@@ -40,9 +40,10 @@ export default function Menu3() {
     const [activeCategory, setActiveCategory] = useState("appetizers"); // Default to first section
 
     // Data Normalization with Image Injection
+    // Prefer an explicit image set on the item; fall back to gallery fuzzy match
     const injectImages = (items) => items.map(item => ({
         ...item,
-        image: getImageForItem(item.name)
+        image: item.image?.replace(/^\//, "") || getImageForItem(item.name)
     }));
 
     const categories = [
@@ -54,6 +55,16 @@ export default function Menu3() {
                 ...injectImages(menuData.mealBoxes)
             ],
             note: menuData.mealBoxesNote
+        },
+        {
+            id: "fried_chicken",
+            label: "Fried Chicken",
+            items: [
+                ...menuData.friedChicken.items,
+                menuData.friedChicken.combo,
+                menuData.friedChicken.partyTray
+            ],
+            note: menuData.friedChicken.note
         },
         { id: "kimbap", label: "Kimbap", items: injectImages(menuData.kimbap), note: menuData.kimbapNote },
         {
