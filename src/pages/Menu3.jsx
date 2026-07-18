@@ -177,7 +177,7 @@ export default function Menu() {
                   <p>Vegan options available</p>
                 </div>
                 <p className="pt-2 border-t border-stone-200">
-                  All meal boxes include rice and 3 traditional Korean side dishes (banchan)
+                  All entrées include rice and 3 traditional Korean side dishes (banchan)
                 </p>
               </div>
             </section>

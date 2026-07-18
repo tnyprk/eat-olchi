@@ -91,21 +91,24 @@ export default function Menu4() {
                         <section>
                             <h2 className="text-olchi-red text-xl md:text-2xl tracking-[0.2em] mb-4 pb-2 border-b-2 border-olchi-red uppercase font-bold">Appetizers</h2>
                             <div>
-                                {menuData.appetizers.map((item, index) => (
-                                    <div key={index} className="mb-6 break-inside-avoid">
-                                        <MenuItem
-                                            name={item.name}
-                                            price={item.price}
-                                            image={item.image}
-                                            subtitle={item.subtitle}
-                                            description={item.description}
-                                            icons={
-                                                item.isVegetarian &&
-                                                <Leaf className="inline-block w-4 h-4 ml-1.5 text-green-600 fill-green-600 align-middle mb-1" />
-                                            }
-                                        />
-                                    </div>
-                                ))}
+                                {menuData.appetizers.map((item, index) => {
+                                    const hideImage = item.name === "Kimchi Pajeon" || item.name === "Kimchi Fried Rice";
+                                    return (
+                                        <div key={index} className="mb-6 break-inside-avoid">
+                                            <MenuItem
+                                                name={item.name}
+                                                price={item.price}
+                                                image={hideImage ? undefined : item.image}
+                                                subtitle={item.subtitle}
+                                                description={item.description}
+                                                icons={
+                                                    item.isVegetarian &&
+                                                    <Leaf className="inline-block w-4 h-4 ml-1.5 text-green-600 fill-green-600 align-middle mb-1" />
+                                                }
+                                            />
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </section>
                     </div>
@@ -191,6 +194,71 @@ export default function Menu4() {
                                 ))}
                             </div>
                             <p className="text-olchi-muted text-xs italic mt-2">{menuData.soondubu.note}</p>
+                        </section>
+
+                        {/* Korean Fried Chicken */}
+                        <section>
+                            <h2 className="text-olchi-red text-xl md:text-2xl tracking-[0.2em] mb-4 pb-2 border-b-2 border-olchi-red uppercase font-bold">
+                                Korean Fried Chicken
+                            </h2>
+                            <p className="text-olchi-muted text-sm italic mb-3 leading-tight">{menuData.friedChicken.note}</p>
+
+                            {/* Size header row */}
+                            <div className="grid grid-cols-[1fr_auto_auto_auto] gap-x-3 text-olchi-muted text-xs uppercase tracking-wider mb-2 pb-1 border-b border-olchi-rule">
+                                <span></span>
+                                <span className="text-right w-12">S</span>
+                                <span className="text-right w-12">M</span>
+                                <span className="text-right w-12">L</span>
+                            </div>
+
+                            {/* Flavor rows */}
+                            <div className="space-y-1.5 mb-3">
+                                {menuData.friedChicken.items
+                                    .filter((item) => item.sizes)
+                                    .map((item, index) => (
+                                        <div key={index} className="grid grid-cols-[1fr_auto_auto_auto] gap-x-3 items-baseline">
+                                            <span className="text-olchi-text text-base font-medium whitespace-nowrap">
+                                                {item.name}
+                                                {item.isSpicy && <Flame className="inline-block w-3.5 h-3.5 ml-1 text-olchi-red align-middle mb-0.5" />}
+                                            </span>
+                                            {item.sizes.map((size, i) => (
+                                                <span key={i} className="text-olchi-text text-base text-right w-12 tabular-nums">
+                                                    {size.price}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    ))}
+                            </div>
+
+                            {/* Combo + Party Tray + Onion Ring */}
+                            <div className="space-y-1 text-sm">
+                                {menuData.friedChicken.combo && (
+                                    <div className="flex justify-between items-baseline">
+                                        <span className="text-olchi-text font-medium">
+                                            {menuData.friedChicken.combo.name}
+                                            <span className="text-olchi-muted italic font-normal"> — {menuData.friedChicken.combo.description}</span>
+                                        </span>
+                                        <span className="text-olchi-text font-medium pl-2 tabular-nums">{menuData.friedChicken.combo.price}</span>
+                                    </div>
+                                )}
+                                {menuData.friedChicken.partyTray && (
+                                    <div className="flex justify-between items-baseline">
+                                        <span className="text-olchi-text font-medium">
+                                            {menuData.friedChicken.partyTray.name}
+                                            <span className="text-olchi-muted italic font-normal"> — {menuData.friedChicken.partyTray.description}</span>
+                                        </span>
+                                        <span className="text-olchi-text font-medium pl-2 tabular-nums">{menuData.friedChicken.partyTray.price}</span>
+                                    </div>
+                                )}
+                                {menuData.friedChicken.items
+                                    .filter((item) => !item.sizes)
+                                    .map((item, index) => (
+                                        <div key={index} className="flex justify-between items-baseline">
+                                            <span className="text-olchi-text font-medium">{item.name}</span>
+                                            <span className="text-olchi-text font-medium pl-2 tabular-nums">{item.price}</span>
+                                        </div>
+                                    ))}
+                            </div>
                         </section>
                     </div>
 

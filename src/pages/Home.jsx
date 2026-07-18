@@ -7,29 +7,29 @@ const deliveryPlatforms = [
   {
     name: "Uber Eats",
     url: delivery.ubereats,
-    color: "bg-[#06C167] hover:bg-[#05A055]",
+    color: "bg-[#7B8F5C] hover:bg-[#657548]",
     icon: "/icons/ubereats.svg",
-    subtitle: "No fee pickup",
+    subtitle: "No pickup fee",
     available: true
   },
   {
     name: "DoorDash",
     url: delivery.doordash,
-    color: "bg-[#FF3008] hover:bg-[#E02B07]",
+    color: "bg-[#A85045] hover:bg-[#7C3A31]",
     icon: "/icons/doordash.svg",
     available: true
   },
   {
     name: "Grubhub",
     url: delivery.grubhub,
-    color: "bg-[#F63440] hover:bg-[#D92D38]",
+    color: "bg-[#9C4A50] hover:bg-[#723A40]",
     icon: "/icons/grubhub.svg",
     available: true
   },
   {
     name: "Direct Pickup",
     url: `tel:${phone}`,
-    color: "bg-[#4A5568] hover:bg-[#2D3748]",
+    color: "bg-[#6B6058] hover:bg-[#4A413A]",
     icon: "/icons/phone.svg",
     available: true
   }
@@ -38,14 +38,14 @@ const deliveryPlatforms = [
 export default function Home() {
   return (
     <div className="min-h-[calc(100vh-64px)] bg-[#F7EDDA] flex flex-col">
-      <div className="flex-1 flex flex-col justify-center items-center py-8 md:py-12">
+      <div className="flex-1 flex flex-col justify-start items-center py-8 md:py-12">
         <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
           {/* Logo Section */}
           <div className="flex justify-center mb-8 md:mb-12">
             <img
               src="/olchi_logo.png"
               alt="Olchi Korean Restaurant"
-              className="w-48 h-48 md:w-56 md:h-56 object-contain"
+              className="w-[27rem] h-[27rem] md:w-[31.5rem] md:h-[31.5rem] object-contain"
             />
           </div>
 

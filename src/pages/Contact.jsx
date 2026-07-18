@@ -119,16 +119,16 @@ export default function Contact() {
               href={delivery.ubereats}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#06C167] text-white py-3 rounded hover:bg-[#05A055] transition-colors font-medium text-center flex flex-col items-center justify-center"
+              className="bg-[#7B8F5C] text-white py-3 rounded hover:bg-[#657548] transition-colors font-medium text-center flex flex-col items-center justify-center"
             >
               <div className="text-sm font-medium">Uber Eats</div>
-              <div className="text-xs">No fee pickup</div>
+              <div className="text-xs">No pickup fee</div>
             </a>
             <a
               href={delivery.doordash}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FF3008] text-white py-3 rounded hover:bg-[#d92907] transition-colors font-medium text-center flex flex-col items-center justify-center"
+              className="bg-[#A85045] text-white py-3 rounded hover:bg-[#7C3A31] transition-colors font-medium text-center flex flex-col items-center justify-center"
             >
               <div className="text-sm font-medium">DoorDash</div>
               <div className="text-xs">Order Online</div>
@@ -137,14 +137,14 @@ export default function Contact() {
               href={delivery.grubhub}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FC6200] text-white py-3 rounded hover:bg-[#d65200] transition-colors font-medium text-center flex flex-col items-center justify-center"
+              className="bg-[#9C4A50] text-white py-3 rounded hover:bg-[#723A40] transition-colors font-medium text-center flex flex-col items-center justify-center"
             >
               <div className="text-sm font-medium">Grubhub</div>
               <div className="text-xs">Order Online</div>
             </a>
             <a
               href={`tel:${phone}`}
-              className="bg-[#B13613] text-white py-3 rounded hover:bg-[#8a2a0f] transition-colors font-medium text-center flex flex-col items-center justify-center"
+              className="bg-[#6B6058] text-white py-3 rounded hover:bg-[#4A413A] transition-colors font-medium text-center flex flex-col items-center justify-center"
             >
               <div className="text-sm font-medium">Direct Pickup</div>
               <div className="text-xs">Call Now</div>

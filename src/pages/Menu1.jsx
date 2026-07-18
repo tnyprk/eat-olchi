@@ -26,10 +26,10 @@ export default function Menu1() {
           />
         </div>
 
-        {/* Single Column - Meal Boxes */}
+        {/* Single Column - Entrées */}
         <section className="mb-10 md:mb-14">
           <h2 className="text-olchi-red text-lg md:text-2xl tracking-[0.3em] mb-1">
-            MEAL BOXES
+            ENTREES
           </h2>
           <p className="font-body text-olchi-muted text-base md:text-lg italic mb-5 md:mb-7 leading-relaxed">
             {menuData.mealBoxesNote}

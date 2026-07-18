@@ -61,7 +61,7 @@ export default function Menu3() {
             label: "Fried Chicken",
             items: [
                 ...menuData.friedChicken.items,
-                menuData.friedChicken.combo,
+                menuData.friedChicken.fries,
                 menuData.friedChicken.partyTray
             ],
             note: menuData.friedChicken.note
