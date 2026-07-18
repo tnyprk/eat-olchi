@@ -15,6 +15,7 @@ const getImageForItem = (itemName) => {
 
     // Manual overrides/priorities
     if (itemName.includes("Budae Jjigae")) return galleryData.find(i => i.filename === "OLCHI-27.jpg")?.filename; // Specific nice shot
+    if (itemName.includes("Beef Bulgogi Soup")) return null; // No photo yet
     if (itemName.includes("Beef Bulgogi")) return galleryData.find(i => i.filename === "OLCHI-20.jpg")?.filename;
     if (itemName.includes("Pork Bulgogi")) return galleryData.find(i => i.filename === "OLCHI-19.jpg")?.filename;
 
